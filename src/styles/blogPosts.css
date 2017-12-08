@@ -1,0 +1,68 @@
+.blogPosts {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border-right: 1px solid #e5e5e5;
+}
+.blogTitle {
+  margin-left: 10px;
+  height: 28px;
+}
+.blogTitle p {
+  color: #5b5f6d;
+  margin-top: 3px;
+}
+.post {
+  margin-bottom: 20px;
+}
+.articleHeader {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-top: 1px solid #e5e5e5;
+}
+.badge {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 34%;
+  margin-left: -60px;
+  color: #ffffff;
+}
+.badgeText {
+  background-color: #327ea3;
+}
+.badgePhoto {
+  background-color: #6ca338;
+}
+.badgeLabel {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  border-right: 1px solid #e5e5e5;
+}
+.badge__PostDate {
+  flex: 1 1 auto;
+  text-align: center;
+}
+.articleBody {
+  margin: 0 30px;
+  padding-bottom: 10px;
+}
+.articleTitle,
+.articleReadMore,
+.articleDescription,
+.articlePhotoPreview {
+  margin-bottom: 30px;
+}
+.articlePhotoPreview {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  background-color: black;
+}

@@ -1,3 +1,9 @@
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    .badge {
+        margin-left: 0;
+    }
+}
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .wrapper {
         width: 95%;
@@ -5,9 +11,109 @@
 
     main {
         flex-direction: column;
+        min-width: 320px;
     }
 
-    .user {
+    .userProfile {
+        padding: 10px;
+    }
+    .userProfileAvatar {
+        width: 75px;
+        height: 75px;
+        margin-right: 10px;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    h4 {
+        font-size: 0.9em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .blogPosts {
+        width: 100%;
+    }
+    .blogTitle {
+        margin-left: 5px;
+        height: 20px;
+        p {
+            margin: 2px 0;
+        }
+    }
+
+    .articleHeader {
+        flex-direction: column;
+        height: 125px;
+        margin-bottom: 0;
+    }
+
+    .tags {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .recentPost .tags {
+        flex-direction: row;
+    }
+
+    .authorInfo,
+    .comments,
+    .postTopic {
+        margin-bottom: 20px;
+    }
+
+    .articleBody {
+        margin: 0;
+    }
+
+    .articleTitle,
+    .articleReadMore,
+    .articleDescription,
+    .articlePhotoPreview {
+        margin-bottom: 10px;
+    }
+
+    .articlePhotoPreview {
+        width: 100%;
+        height: 240px;
+    }
+
+    .badge{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .secondary {
+        width: 100%;
+    }
+
+    .calendar {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .pagination {
+        padding: 10px 0;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .wrapper {
+        width: 70%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .userProfile {
         padding: 10px;
     }
     .userProfileAvatar {
@@ -72,10 +178,10 @@
 
     .articlePhotoPreview {
         width: 100%;
-        height: 140px;
+        height: 240px;
     }
 
-    .badge {
+    .badge{
         width: 100%;
         margin-left: 0;
     }
@@ -84,8 +190,28 @@
         width: 100%;
     }
 
+    .calendar {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
     .pagination {
         padding: 10px 0;
         font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .wrapper {
+        width: 80%;
+    }
+
+    .articleBody {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .calendar {
+        max-width: 300px;
     }
 }

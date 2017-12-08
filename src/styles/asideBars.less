@@ -1,0 +1,122 @@
+.topicCategories,
+.lastPosts,
+.twitterBar,
+.asideTags,
+.recentComments{
+  padding: 20px 10px;
+  border-bottom: 1px solid  @border-line;
+}
+
+.topicCategory,
+.recentPost,
+.twitterPost {
+  margin-bottom: 10px;
+
+  p {
+    display: inline-block;
+  }
+}
+
+.topicCategory i {
+  color: #4ca5d0;
+}
+
+.topicCategory,
+.twitterPost {
+  p {
+    font-size: 0.8em;
+  }
+}
+
+.lastPosts {
+  :first-child {
+    margin-left: 0;
+  }
+
+  h5, i, p {
+    color: @grey-secondary;
+  }
+}
+
+.twitterBar {
+
+  a {
+    color: #4ca5d0;
+    font-size: 0.8em;
+  }
+
+  b {
+    color: ;
+    font-size: 0.8em;
+  }
+
+  p {
+    display: block;
+    color: #b1b1b1;
+    font-size: 0.7em;
+  }
+}
+
+.tagsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.asideTag {
+  padding: 5px;
+  background-color: #e5e5e5;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  &:hover {
+    background-color: #1fa3e3;
+    color: white;
+  }
+}
+
+.calendar {
+  padding: 20px 10px;
+  font-size: 0.7em;
+  border-bottom: 1px solid @border-line;
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  caption {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  td, th {
+    margin-right: 8px;
+    text-align: center;
+  }
+  th {
+    color: #1fa3e3;
+  }
+
+  td:hover {
+    background-color: #1fa3e3;
+    color: white;
+  }
+}
+
+.recentComments {
+
+  .postDate {
+
+    margin-left: 0;
+  }
+
+  span {
+    color: #1fa3e3;
+  }
+
+  p {
+    color: @grey-secondary;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+}

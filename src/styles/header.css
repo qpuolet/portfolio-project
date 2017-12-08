@@ -1,0 +1,22 @@
+header {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+}
+.userProfile {
+  display: flex;
+  padding: 30px;
+}
+.userProfileAvatar {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+.userProfileInfo {
+  display: flex;
+  flex-direction: column;
+}
+.userProfileInfo h4 {
+  color: #4ca5d0;
+  margin-top: 8px;
+}

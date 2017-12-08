@@ -1,0 +1,107 @@
+.secondary {
+  width: 30%;
+}
+.secondary h4 {
+  margin-bottom: 20px;
+}
+.secondary li {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
+.topicCategories,
+.lastPosts,
+.twitterBar,
+.asideTags,
+.recentComments {
+  padding: 20px 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.topicCategory,
+.recentPost,
+.twitterPost {
+  margin-bottom: 10px;
+}
+.topicCategory p,
+.recentPost p,
+.twitterPost p {
+  display: inline-block;
+}
+.topicCategory i {
+  color: #4ca5d0;
+}
+.topicCategory p,
+.twitterPost p {
+  font-size: 0.8em;
+}
+.lastPosts :first-child {
+  margin-left: 0;
+}
+.lastPosts h5,
+.lastPosts i,
+.lastPosts p {
+  color: #5b5f6d;
+}
+.twitterBar a {
+  color: #4ca5d0;
+  font-size: 0.8em;
+}
+.twitterBar b {
+  color: #5b5f6d;
+  font-size: 0.8em;
+}
+.twitterBar p {
+  display: block;
+  color: #b1b1b1;
+  font-size: 0.7em;
+}
+.tagsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.asideTag {
+  padding: 5px;
+  background-color: #e5e5e5;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+.asideTag:hover {
+  background-color: #1fa3e3;
+  color: white;
+}
+.calendar {
+  padding: 20px 10px;
+  font-size: 0.7em;
+  border-bottom: 1px solid #e5e5e5;
+}
+.calendar table {
+  width: 100%;
+  margin: 0 auto;
+}
+.calendar caption {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.calendar td,
+.calendar th {
+  margin-right: 8px;
+  text-align: center;
+}
+.calendar th {
+  color: #1fa3e3;
+}
+.calendar td:hover {
+  background-color: #1fa3e3;
+  color: white;
+}
+.recentComments .postDate {
+  margin-left: 0;
+}
+.recentComments span {
+  color: #1fa3e3;
+}
+.recentComments p {
+  color: #5b5f6d;
+  font-size: 0.8em;
+  font-weight: bold;
+}

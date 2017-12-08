@@ -1,5 +1,5 @@
 {
     "watchFolder": "src",
-    "outputFolder": "public",
-    "sourceMap": true
+    "mainFile": "./styles/stylesheet.less",
+    "outputFolder": "public"
 }
