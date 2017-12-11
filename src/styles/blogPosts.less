@@ -1,5 +1,3 @@
-
-
 .blogPosts {
   display: flex;
   flex-direction: column;
@@ -12,7 +10,6 @@
   height: 28px;
 
   p {
-    color: @grey-secondary;
     margin-top: 3px;
   }
 }
@@ -21,6 +18,12 @@
 // Separate post
 .post {
   margin-bottom: 20px;
+
+  .badgePhoto {
+    background-color: @badge__photo;
+  }
+
+
 }
 
 // header of article
@@ -31,6 +34,10 @@
   width: 100%;
   margin-bottom: 30px;
   border-top: 1px solid @border-line;
+
+  a {
+    color: @tag-text;
+  }
 }
 
 
@@ -44,12 +51,31 @@
   color: @badge-text-color;
 }
 
-.badgeText {
-  background-color: @badge__text;
+.photo__Article {
+  .badge {
+    background-color: @badge__photo;
+  }
+  .readMoreButton {
+    .decorateButton(@badge__photo);
+  }
 }
 
-.badgePhoto {
-  background-color: @badge__photo;
+.text__Article {
+  .badge {
+    background-color: @badge__text;
+  }
+  .readMoreButton {
+    .decorateButton(@badge__text);
+  }
+}
+
+.video__Article {
+  .badge {
+    background-color: @badge-video;
+  }
+  .readMoreButton {
+    .decorateButton(@badge-video);
+  }
 }
 
 .badgeLabel {
@@ -84,5 +110,72 @@
   display: flex;
   width: 100%;
   height: 250px;
-  background-color: black;
+}
+
+
+@button-tint: fadeout(#000, 90%);
+
+.button {
+  display: inline-block;
+  font-family: 'Nunito',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  padding: .8em 1.4em;
+  padding-right: 4.7em;
+  border: none;
+  color: white;
+  transition: .2s;
+  min-width: 15em;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    width: 2.8em;
+    content: "\00a0";
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+
+    transition: .2s;
+    transform-origin: 50% 60%;
+  }
+}
+
+.decorateButton(@color) {
+  background-color: @color;
+  &:hover {
+    background: darken(@color, 5%);
+  }
+  &:active,
+  &:focus {
+    background: darken(@color, 20%);
+  }
+}
+
+.readMoreButton {
+  &:after {
+    content: "\F054";
+  }
+  &:hover:after {
+    -webkit-animation: bounceright .3s alternate ease infinite;
+    animation: bounceright .3s alternate ease infinite;
+  }
+}
+
+
+@-webkit-keyframes bounceright {
+  from { -webkit-transform: translateX(0); }
+  to   { -webkit-transform: translateX(3px); }
+}
+
+@keyframes bounceright {
+  from { transform: translateX(0); }
+  to   { transform: translateX(3px); }
 }

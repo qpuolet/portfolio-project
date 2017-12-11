@@ -11,14 +11,26 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="gradient"></div>
     <div class="wrapper">
+        <div class="social-hub">
+            <a href="#"><i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-vimeo fa-lg" aria-hidden="true"></i></a>
+        </div>
         <header>
             <div class="userProfile">
-                <img class="userProfileAvatar" src="./img/majestic.jpg" alt="avatar" />
+                <a href="#">
+                    <img class="userProfileAvatar" src="./img/majestic.jpg" alt="avatar" />
+                </a>
                 <div class="userProfileInfo">
-                    <h3>Anton</h3>
-                    <h3>Kudryavtsev</h3>
-                    <h4>Junior Front-End Developer</h4>
+                    <h3><a href="#">Anton</a></h3>
+                    <h3><a href="#">Kudryavtsev</a></h3>
+                    <a href="#"><h4>Junior Front-End Developer</h4></a>
                 </div>
             </div>
         </header>
@@ -27,10 +39,9 @@
                 <div class="blogTitle">
                     <p>Blog</p>
                 </div>
-                <article class="post">
-
+                <article class="post text__Article">
                     <div class="articleHeader">
-                        <div class="badge badgeText">
+                        <div class="badge">
                             <div class="badgeLabel">
                                 <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
                             </div>
@@ -39,24 +50,30 @@
                             </div>
                         </div>
                         <div class="tags">
-                            <div class="authorInfo tag">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <p>Matthew Johnson</p>
-                            </div>
-                            <div class="comments tag">
-                                <i class="fa fa-comment" aria-hidden="true"></i>
-                                <p>230</p>
-                            </div>
-                            <div class="postTopic tag">
-                                <i class="fa fa-align-left" aria-hidden="true"></i>
-                                <p>Design, Wordprsdsadsadaess</p>
-                            </div>
+                            <a href="#">
+                                <div class="authorInfo tag">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <p>Matthew Johnson</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="comments tag">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    <p>230</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="postTopic tag">
+                                    <i class="fa fa-align-left" aria-hidden="true"></i>
+                                    <p>Design, Wordprsdsadsadaess</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="articleBody">
-                        <h3 class="articleTitle">How to start learning javascript</h3>
-                        <img class="articlePhotoPreview" src="./img/java-script.jpg" alt="photo">
+                        <h3 class="articleTitle"><a href="#">How to start learning javascript</a></h3>
+                        <a href="#"><img class="articlePhotoPreview" src="./img/java-script.jpg" alt="photo"></a>
                         <div class="articleDescription">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -64,14 +81,14 @@
                                 a type specimen book.
                             </p>
                         </div>
-                        <button class="articleReadMore">ReadMore</button>
+                        <button class="button readMoreButton">Read more</button>
                     </div>
 
                 </article>
-                <article class="post">
+                <article class="post photo__Article">
 
                     <div class="articleHeader">
-                        <div class="badge badgePhoto">
+                        <div class="badge">
                             <div class="badgeLabel">
                                 <i class="fa fa-camera fa-lg" aria-hidden="true"></i>
                             </div>
@@ -80,24 +97,30 @@
                             </div>
                         </div>
                         <div class="tags">
-                            <div class="authorInfo tag">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <p>Matthew Johnson</p>
-                            </div>
-                            <div class="comments tag">
-                                <i class="fa fa-comment" aria-hidden="true"></i>
-                                <p>230</p>
-                            </div>
-                            <div class="postTopic tag">
-                                <i class="fa fa-align-left" aria-hidden="true"></i>
-                                <p>Design, Wordprsdsadsadaess</p>
-                            </div>
+                            <a href="#">
+                                <div class="authorInfo tag">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <p>Matthew Johnson</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="comments tag">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    <p>230</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="postTopic tag">
+                                    <i class="fa fa-align-left" aria-hidden="true"></i>
+                                    <p>Design, Wordprsdsadsadaess</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <div class="articleBody">
-                        <h3 class="articleTitle">What is majestic?</h3>
-                        <img class="articlePhotoPreview" src="./img/majestic-casual.jpg" alt="photo">
+                        <h3 class="articleTitle"><a href="#">What is majestic?</a></h3>
+                        <a href="#"><img class="articlePhotoPreview" src="./img/majestic-casual.jpg" alt="photo"></a>
                         <div class="articleDescription">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -105,7 +128,56 @@
                                 a type specimen book.
                             </p>
                         </div>
-                        <button class="articleReadMore">ReadMore</button>
+                        <button class="button readMoreButton">Read more</button>
+                    </div>
+
+                </article>
+
+                </article>
+                <article class="post video__Article">
+
+                    <div class="articleHeader">
+                        <div class="badge">
+                            <div class="badgeLabel">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div class="badge__PostDate">
+                                <h3>APR.14</h3>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <a href="#">
+                                <div class="authorInfo tag">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <p>Matthew Johnson</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="comments tag">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    <p>230</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="postTopic tag">
+                                    <i class="fa fa-align-left" aria-hidden="true"></i>
+                                    <p>Design, Wordprsdsadsadaess</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="articleBody">
+                        <h3 class="articleTitle"><a href="#">What is majestic?</a></h3>
+                        <a href="#"><img class="articlePhotoPreview" src="./img/majestic-video.jpg" alt="photo"></a>
+                        <div class="articleDescription">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make
+                                a type specimen book.
+                            </p>
+                        </div>
+                        <button class="button readMoreButton">Read more</button>
                     </div>
 
                 </article>
@@ -121,162 +193,229 @@
                     </div>
                 </div>
             </section>
+
             <aside class="secondary">
-                <div class="secondaryWrapper">
-                    <div class="topicCategories">
-                        <h4>Categories</h4>
-                        <div class="topicCategory">
+                <div class="topicCategories">
+                    <h4>Categories</h4>
+                    <div class="topicCategory">
+                        <a href="#">
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                            <b>Design</b>
+                        </a>
+                    </div>
+                    <div class="topicCategory">
+                        <a href="#">
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                            <b>Wordpress</b>
+                        </a>
+                    </div>
+                    <div class="topicCategory">
+                        <a href="#">
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                            <b>Video</b>
+                        </a>
+                    </div>
+                </div>
+                <div class="lastPosts">
+                    <h4>Recent Posts</h4>
+                    <div class="recentPost">
+                        <a href="#"><b>Lorem Ipsum is simply dummy</b></a>
+                        <div class="tags">
                             <a href="#">
-                                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                                <p>Design</p>
+                                <div class="postDate">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    <p>Jul.24</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="authorInfo">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <p>Matthew </p>
+                                </div>
                             </a>
                         </div>
-                        <div class="topicCategory">
-                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                            <p>Wordpress</p>
-                        </div>
-                        <div class="topicCategory">
-                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                            <p>Video</p>
-                        </div>
                     </div>
-                    <div class="lastPosts">
-                        <h4>Recent Posts</h4>
-                        <div class="recentPost">
-                            <h5>Lorem Ipsum is simply dummy</h5>
-                            <div class="tags">
-                                <div class="postDate tag">
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <p>Jul.24</p>
-                                </div>
-                                <div class="authorInfo tag">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <p>Matthew </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="recentPost">
-                            <h5>Lorem Ipsum is simply dummy</h5>
-                            <div class="tags">
-                                <div class="postDate tag">
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <p>Jul.24</p>
-                                </div>
-                                <div class="authorInfo tag">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <p>Matthew </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="recentPost">
-                            <h5>Lorem Ipsum is simply dummy</h5>
-                            <div class="tags">
-                                <div class="postDate tag">
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <p>Jul.24</p>
-                                </div>
-                                <div class="authorInfo tag">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <p>Matthew </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="twitterBar">
-                        <h4>Twitter Feed</h4>
-                        <div class="twitterPost">
-                            <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry</b>
-                            <a href="#">pamparam.com</a>
-                            <p>50 minutes ago</p>
-                        </div>
-                        <div class="twitterPost">
-                            <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry</b>
-                            <a href="#">pamparam.com</a>
-                            <p>2 days ago</p>
-                        </div>
-                    </div>
-                    <div class="asideTags">
-                        <h4>Tags</h4>
-                        <div class="tagsWrapper">
-                            <div class="asideTag">Design</div>
-                            <div class="asideTag">Image</div>
-                            <div class="asideTag">Slider</div>
-                            <div class="asideTag">Video</div>
-                            <div class="asideTag">Wordpress</div>
-                        </div>
-                    </div>
-                    <div class="calendar">
-                        <table>
-                            <caption>JULY 2017</caption>
-                            <tr class="weekdays">
-                                <th>M</th>
-                                <th>T</th>
-                                <th>W</th>
-                                <th>T</th>
-                                <th>F</th>
-                                <th>S</th>
-                                <th>S</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>9</td>
-                                <td>10</td>
-                                <td>11</td>
-                                <td>12</td>
-                                <td>13</td>
-                                <td>14</td>
-                            </tr>
-                            <tr>
-                                <td>15</td>
-                                <td>16</td>
-                                <td>17</td>
-                                <td>18</td>
-                                <td>19</td>
-                                <td>20</td>
-                                <td>21</td>
-                            </tr>
-                            <tr>
-                                <td>22</td>
-                                <td>23</td>
-                                <td>24</td>
-                                <td>25</td>
-                                <td>26</td>
-                                <td>27</td>
-                                <td>28</td>
-                            </tr>
-                            <tr>
-                                <td>29</td>
-                                <td>30</td>
-                                <td>31</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="recentComments">
-                        <p><span class="commentator">Richard Johnson: </span>Lorem Ipsum is simply dummy</p>
+                    <div class="recentPost">
+                        <a href="#"><b>Lorem Ipsum is simply dummy</b></a>
                         <div class="tags">
-                            <div class="postDate tag">
-                                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                <p>Jul.24</p>
-                            </div>
+                            <a href="#">
+                                <div class="postDate">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    <p>Jul.24</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="authorInfo">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <p>Matthew </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recentPost">
+                        <a href="#"><b>Lorem Ipsum is simply dummy</b></a>
+                        <div class="tags">
+                            <a href="#">
+                                <div class="postDate">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    <p>Jul.24</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="authorInfo">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <p>Matthew </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
+                <div class="twitterBar">
+                    <h4>Twitter Feed</h4>
+                    <div class="twitterPost">
+                        <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry</b>
+                        <a href="#">pamparam.com</a>
+                        <p>50 minutes ago</p>
+                    </div>
+                    <div class="twitterPost">
+                        <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry</b>
+                        <a href="#">pamparam.com</a>
+                        <p>2 days ago</p>
+                    </div>
+                </div>
+                <div class="asideTags">
+                    <h4>Tags</h4>
+                    <div class="tagsWrapper">
+                        <a href="#"><div class="asideTag">Design</div></a>
+                        <a href="#"><div class="asideTag">Image</div></a>
+                        <a href="#"><div class="asideTag">Slider</div></a>
+                        <a href="#"><div class="asideTag">Video</div></a>
+                        <a href="#"><div class="asideTag">Wordpress</div></a>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <table>
+                        <caption>JULY 2017</caption>
+                        <tr class="weekdays">
+                            <th>M</th>
+                            <th>T</th>
+                            <th>W</th>
+                            <th>T</th>
+                            <th>F</th>
+                            <th>S</th>
+                            <th>S</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td class="active">11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="recentComments">
+                    <h4>Recent Comments</h4>
+                    <div class="recentComment">
+                        <a href="#"><p><span class="commentator">Richard Johnson: </span>Lorem Ipsum is simply dummy</p></a>
+                        <div class="tags">
+                            <a href="#">
+                                <div class="postDate">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    <p>Jul.24</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recentComment">
+                        <a href="#"><p><span class="commentator">John Stones: </span>Liester Ipsum is simply dummy</p></a>
+                        <div class="tags">
+                            <a href="#">
+                                <div class="postDate">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    <p>Aug.2</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recentComment">
+                        <a href="#"><p><span class="commentator">Nic Otamendi: </span>Lorem City of is simply dummy</p></a>
+                        <div class="tags">
+                            <a href="#">
+                                <div class="postDate">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    <p>Apr.14</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="asideTags">
+                    <h4>Tags</h4>
+                    <div class="tagsWrapper">
+                        <a href="#"><div class="asideTag">Design</div></a>
+                        <a href="#"><div class="asideTag">Image</div></a>
+                        <a href="#"><div class="asideTag">Slider</div></a>
+                        <a href="#"><div class="asideTag">Video</div></a>
+                        <a href="#"><div class="asideTag">Wordpress</div></a>
+                    </div>
+                </div>
+                <div class="twitterBar">
+                    <h4>Twitter Feed</h4>
+                    <div class="twitterPost">
+                        <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry</b>
+                        <a href="#">pamparam.com</a>
+                        <p>50 minutes ago</p>
+                    </div>
+                    <div class="twitterPost">
+                        <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry</b>
+                        <a href="#">pamparam.com</a>
+                        <p>2 days ago</p>
+                    </div>
                 </div>
             </aside>
         </main>
+        <footer>
+            <p>ThemeRex © 2014 All Rights Reserved</p>
+        </footer>
     </div>
 </body>
 </html>

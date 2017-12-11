@@ -2,39 +2,70 @@
 .lastPosts,
 .twitterBar,
 .asideTags,
-.recentComments{
+.recentComments {
   padding: 20px 10px;
   border-bottom: 1px solid  @border-line;
 }
 
 .topicCategory,
 .recentPost,
-.twitterPost {
+.twitterPost,
+.recentComment {
   margin-bottom: 10px;
 
-  p {
+  p, b {
     display: inline-block;
+    color: @tag-text;
+    font-size: 0.8em;
+  }
+  
+  a {
+    color: @tag-text;
+
   }
 }
 
-.topicCategory i {
+.recentPost:hover b {
   color: #4ca5d0;
 }
 
-.topicCategory,
-.twitterPost {
-  p {
-    font-size: 0.8em;
+.topicCategories {
+
+  display: inline-block;
+
+  b {
+    padding: 5px;
+  }
+
+  i {
+    color: #4ca5d0;
   }
 }
 
-.lastPosts {
+.topicCategory {
+  margin-bottom: 5px;
+}
+
+.topicCategory:hover b{
+   background-color: #e5e5e5;
+   color: black;
+ }
+
+.topicCategory:active,
+.topicCategory:focus,
+.asideTag:focus {
+  background-color: salmon;
+  color: white;
+
+}
+
+.recentPost {
   :first-child {
     margin-left: 0;
   }
 
-  h5, i, p {
-    color: @grey-secondary;
+  :not(i) {
+    margin-right: 2px;
   }
 }
 
@@ -42,11 +73,6 @@
 
   a {
     color: #4ca5d0;
-    font-size: 0.8em;
-  }
-
-  b {
-    color: ;
     font-size: 0.8em;
   }
 
@@ -67,6 +93,7 @@
   background-color: #e5e5e5;
   margin-right: 2px;
   margin-bottom: 2px;
+  font-size: 0.9em;
   &:hover {
     background-color: #1fa3e3;
     color: white;
@@ -90,13 +117,16 @@
   }
 
   td, th {
-    margin-right: 8px;
+    padding: 4px;
     text-align: center;
   }
   th {
     color: #1fa3e3;
   }
 
+  .active {
+    background-color: #e5e5e5;
+  }
   td:hover {
     background-color: #1fa3e3;
     color: white;
@@ -115,7 +145,7 @@
   }
 
   p {
-    color: @grey-secondary;
+    color: @tag-text;
     font-size: 0.8em;
     font-weight: bold;
   }
