@@ -1,112 +1,85 @@
-.topicCategories,
-.lastPosts,
-.twitterBar,
-.asideTags,
-.recentComments {
+.asideWrapper {
+  width: 30%;
+  min-width: 200px;
+}
+
+.asideWidget {
   padding: 20px 10px;
   border-bottom: 1px solid  @border-line;
 }
 
-.topicCategory,
-.recentPost,
-.twitterPost,
-.recentComment {
+.asideWidget__title {
+  margin-bottom: 20px;
+}
+
+.asideWidget__list {
+  color: @secondary-text;
+}
+
+.u-fs-8 {
+  font-size: 0.8em;
+}
+
+.u-mb-10:not(:last-child) {
   margin-bottom: 10px;
-
-  p, b {
-    display: inline-block;
-    color: @tag-text;
-    font-size: 0.8em;
-  }
-  
-  a {
-    color: @tag-text;
-
-  }
 }
 
-.recentPost:hover b {
-  color: #4ca5d0;
-}
+// Customization
 
-.topicCategories {
+.topic__item > :first-child {
 
-  display: inline-block;
-
-  b {
-    padding: 5px;
+  :before {
+    font-family: 'FontAwesome', sans-serif;
+    content: "\f138";
+    font-size: 1.1em;
+    margin-right: 5px;
+    color: @text-highlighting;
   }
 
-  i {
-    color: #4ca5d0;
+  :hover {
+    color: @text-highlighting;
   }
 }
 
-.topicCategory {
-  margin-bottom: 5px;
+.recentPost__title:hover {
+  color: @text-highlighting;
 }
 
-.topicCategory:hover b{
-   background-color: #e5e5e5;
-   color: black;
- }
-
-.topicCategory:active,
-.topicCategory:focus,
-.asideTag:focus {
-  background-color: salmon;
-  color: white;
-
+.twitter__link {
+  display: block;
+  color: @text-highlighting;
 }
 
-.recentPost {
-  :first-child {
-    margin-left: 0;
-  }
-
-  :not(i) {
-    margin-right: 2px;
+.asideWidget--tags {
+  .asideWidget__list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.twitterBar {
-
-  a {
-    color: #4ca5d0;
-    font-size: 0.8em;
-  }
-
-  p {
-    display: block;
-    color: #b1b1b1;
-    font-size: 0.7em;
-  }
-}
-
-.tagsWrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.asideTag {
+.tag__item {
+  margin-right: 4px;
   padding: 5px;
-  background-color: #e5e5e5;
-  margin-right: 2px;
-  margin-bottom: 2px;
-  font-size: 0.9em;
-  &:hover {
+  background-color: @background-highlighting;
+  margin-bottom: 4px;
+  font-size: .9em;
+  font-weight: 400;
+
+  &:hover{
     background-color: #1fa3e3;
-    color: white;
+  }
+
+  &:hover .isHover{
+    color: #fff;
   }
 }
 
-.calendar {
+.asideWidget--calendar {
   padding: 20px 10px;
   font-size: 0.7em;
-  border-bottom: 1px solid @border-line;
 
   table {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -119,34 +92,29 @@
   td, th {
     padding: 4px;
     text-align: center;
+    cursor: default;
   }
   th {
     color: #1fa3e3;
   }
 
-  .active {
-    background-color: #e5e5e5;
+  .active, .toDay {
+    background-color: @background-highlighting;
   }
+
   td:hover {
     background-color: #1fa3e3;
     color: white;
   }
 }
 
-.recentComments {
+.asideWidget__commentator {
+  color: @text-highlighting;
+}
 
-  .postDate {
 
-    margin-left: 0;
-  }
-
-  span {
-    color: #1fa3e3;
-  }
-
-  p {
-    color: @tag-text;
-    font-size: 0.8em;
-    font-weight: bold;
+.recentComment__item:hover {
+  .isHover {
+    color: @text-highlighting;
   }
 }

@@ -1,1 +1,655 @@
-body{background-color:#f3f3f3}.gradient{position:fixed;height:2px;width:100%;background:linear-gradient(to right, #327ea3 20%, #4ca5d0 20%, #4ca5d0 40%, #6ca338 40%, #6ca338 60%, #ffbc38 60%, #ffbc38 80%, #e82c0c 80%)}.social-hub{display:flex;justify-content:flex-end;margin-bottom:20px}.social-hub a{color:#c3c3c3}.social-hub a:not(:last-child){margin-right:4px}.social-hub a:hover{color:#4ca5d0}.wrapper{padding-top:44px;width:64%;min-width:600px;max-width:820px;font-family:'Nunito',sans-serif;margin:0 auto;padding-bottom:30px}main{display:flex;min-width:600px;width:100%;background-color:#fff}.secondary{width:30%;min-width:200px}.secondary h4{margin-bottom:20px}.secondary li{margin-bottom:10px;font-size:.8em}.tags{display:flex;flex-wrap:wrap;width:76%;color:#5B5F6C;word-break:break-all}.tags p{font-size:.75em}.tag{display:flex;margin-left:10px;margin-bottom:5px}.tag :first-child{margin-right:5px}.pagination{border-top:1px solid #e5e5e5;padding:20px 0 20px 30px}.pagination .pageNumber{display:inline-block;padding:0 8px}.pageNumber:hover{background-color:rgba(0,0,0,0.1)}footer{display:flex;justify-content:flex-end;margin-top:20px;font-weight:bold;font-size:.6em;color:#c3c3c3}header{width:100%;border-bottom:1px solid #e5e5e5;background-color:#fff}header h4{color:#4ca5d0;margin-top:8px}.userProfile{display:flex;padding:30px}.userProfileAvatar{width:100px;height:100px;margin-right:20px}.userProfileInfo{display:inline-block}.blogPosts{display:flex;flex-direction:column;width:70%;border-right:1px solid #e5e5e5}.blogTitle{margin-left:10px;height:28px}.blogTitle p{margin-top:3px}.post{margin-bottom:20px}.post .badgePhoto{background-color:#6ca338}.articleHeader{display:flex;align-items:center;height:60px;width:100%;margin-bottom:30px;border-top:1px solid #e5e5e5}.articleHeader a{color:#5B5F6C}.badge{display:flex;align-items:center;height:60px;width:34%;margin-left:-60px;color:#fff}.photo__Article .badge{background-color:#6ca338}.photo__Article .readMoreButton{background-color:#6ca338}.photo__Article .readMoreButton:hover{background:#5f9031}.photo__Article .readMoreButton:active,.photo__Article .readMoreButton:focus{background:#3a571e}.text__Article .badge{background-color:#327ea3}.text__Article .readMoreButton{background-color:#327ea3}.text__Article .readMoreButton:hover{background:#2c6f8f}.text__Article .readMoreButton:active,.text__Article .readMoreButton:focus{background:#1a4255}.video__Article .badge{background-color:#e82c0c}.video__Article .readMoreButton{background-color:#e82c0c}.video__Article .readMoreButton:hover{background:#d0270b}.video__Article .readMoreButton:active,.video__Article .readMoreButton:focus{background:#871a07}.badgeLabel{display:flex;flex:0 0 auto;justify-content:center;align-items:center;width:60px;height:100%;border-right:1px solid #e5e5e5}.badge__PostDate{flex:1 1 auto;text-align:center}.articleBody{margin:0 30px;padding-bottom:10px}.articleTitle,.articleReadMore,.articleDescription,.articlePhotoPreview{margin-bottom:30px}.articlePhotoPreview{display:flex;width:100%;height:250px}.button{display:inline-block;font-family:'Nunito',sans-serif;-webkit-font-smoothing:antialiased;position:relative;padding:.8em 1.4em;padding-right:4.7em;border:none;color:white;transition:.2s;min-width:15em;font-size:.75em;text-transform:uppercase;font-weight:bold}.button:before,.button:after{position:absolute;top:0;bottom:0;right:0;padding-top:inherit;padding-bottom:inherit;width:2.8em;content:"\00a0";font-family:'FontAwesome',sans-serif;font-size:1.2em;text-align:center;transition:.2s;transform-origin:50% 60%}.readMoreButton:after{content:"\F054"}.readMoreButton:hover:after{-webkit-animation:bounceright .3s alternate ease infinite;animation:bounceright .3s alternate ease infinite}@-webkit-keyframes bounceright{from{-webkit-transform:translateX(0)}to{-webkit-transform:translateX(3px)}}@keyframes bounceright{from{transform:translateX(0)}to{transform:translateX(3px)}}.topicCategories,.lastPosts,.twitterBar,.asideTags,.recentComments{padding:20px 10px;border-bottom:1px solid #e5e5e5}.topicCategory,.recentPost,.twitterPost,.recentComment{margin-bottom:10px}.topicCategory p,.recentPost p,.twitterPost p,.recentComment p,.topicCategory b,.recentPost b,.twitterPost b,.recentComment b{display:inline-block;color:#5B5F6C;font-size:.8em}.topicCategory a,.recentPost a,.twitterPost a,.recentComment a{color:#5B5F6C}.recentPost:hover b{color:#4ca5d0}.topicCategories{display:inline-block}.topicCategories b{padding:5px}.topicCategories i{color:#4ca5d0}.topicCategory{margin-bottom:5px}.topicCategory:hover b{background-color:#e5e5e5;color:black}.topicCategory:active,.topicCategory:focus,.asideTag:focus{background-color:salmon;color:white}.recentPost :first-child{margin-left:0}.recentPost :not(i){margin-right:2px}.twitterBar a{color:#4ca5d0;font-size:.8em}.twitterBar p{display:block;color:#b1b1b1;font-size:.7em}.tagsWrapper{display:flex;flex-wrap:wrap}.asideTag{padding:5px;background-color:#e5e5e5;margin-right:2px;margin-bottom:2px;font-size:.9em}.asideTag:hover{background-color:#1fa3e3;color:white}.calendar{padding:20px 10px;font-size:.7em;border-bottom:1px solid #e5e5e5}.calendar table{width:100%;margin:0 auto}.calendar caption{font-size:1.4em;font-weight:bold;margin-bottom:10px}.calendar td,.calendar th{padding:4px;text-align:center}.calendar th{color:#1fa3e3}.calendar .active{background-color:#e5e5e5}.calendar td:hover{background-color:#1fa3e3;color:white}.recentComments .postDate{margin-left:0}.recentComments span{color:#1fa3e3}.recentComments p{color:#5B5F6C;font-size:.8em;font-weight:bold}@media screen and (min-width:0) and (max-width:320px){.badge{margin-left:0}}@media screen and (min-width:320px) and (max-width:480px){.wrapper{width:95%}main{flex-direction:column;min-width:320px}.userProfile{padding:10px}.userProfileAvatar{width:75px;height:75px;margin-right:10px}h3{font-size:1em}h4{font-size:.9em}p{font-size:.8em}.blogPosts{width:100%}.blogTitle{margin-left:5px;height:20px}.blogTitle p{margin:2px 0}.articleHeader{flex-direction:column;height:125px;margin-bottom:0}.tags{flex-direction:column;width:100%;margin-top:10px}.recentPost .tags{flex-direction:row}.authorInfo,.comments,.postTopic{margin-bottom:20px}.articleBody{margin:0}.articleTitle,.articleReadMore,.articleDescription,.articlePhotoPreview{margin-bottom:10px}.articlePhotoPreview{width:100%;height:240px}.badge{width:100%;margin-left:0}.secondary{width:100%}.calendar{margin:0 auto;max-width:300px}.pagination{padding:10px 0;font-size:.8em}}@media screen and (min-width:480px) and (max-width:767px){.wrapper{width:70%}main{flex-direction:column}.userProfile{padding:10px}.userProfileAvatar{width:75px;height:75px;margin-right:10px}h3{font-size:1em}h4{font-size:.9em}p{font-size:.8em}.blogPosts{width:100%}.blogTitle{margin-left:5px;height:20px}.blogTitle p{margin:2px 0}.articleHeader{flex-direction:column;height:125px;margin-bottom:0}.tags{flex-direction:column;width:100%;margin-top:10px}.recentPost .tags{flex-direction:row}.authorInfo,.comments,.postTopic{margin-bottom:20px}.articleBody{margin:0}.articleTitle,.articleReadMore,.articleDescription,.articlePhotoPreview{margin-bottom:10px}.articlePhotoPreview{width:100%;height:240px}.badge{width:100%;margin-left:0}.secondary{width:100%}.calendar{margin:0 auto;max-width:300px}.pagination{padding:10px 0;font-size:.8em}}@media screen and (min-width:768px) and (max-width:1280px){.wrapper{width:80%}.articleBody{margin-left:15px;margin-right:15px}.calendar{max-width:300px}}
+a {
+    color: #5b5f6c
+}
+
+body {
+    background-color: #f3f3f3
+}
+
+.gradient {
+    position: fixed;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #327ea3 20%, #4ca5d0 20%, #4ca5d0 40%, #6ca338 40%, #6ca338 60%, #ffbc38 60%, #ffbc38 80%, #e82c0c 80%)
+}
+
+.wrapper {
+    padding-top: 44px;
+    width: 64%;
+    min-width: 600px;
+    max-width: 820px;
+    font-family: 'Nunito', sans-serif;
+    margin: 0 auto;
+    padding-bottom: 30px
+}
+
+.socialHub {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    color: #c3c3c3
+}
+
+.socialHub .icon {
+    margin-right: 20px
+}
+
+.icon:hover {
+    color: #4ca5d0
+}
+
+.socialHub--rss:before {
+    content: "\f09e"
+}
+
+.socialHub--facebook:before {
+    content: "\f09a"
+}
+
+.socialHub--twitter:before {
+    content: "\f099"
+}
+
+.socialHub--google:before {
+    content: "\f0d5"
+}
+
+.socialHub--linkedin:before {
+    content: "\f0e1"
+}
+
+.socialHub--dribble:before {
+    content: "\f17d"
+}
+
+.socialHub--vimeo:before {
+    content: "\f27d"
+}
+
+main {
+    display: flex;
+    min-width: 600px;
+    width: 100%;
+    background-color: #fff
+}
+
+.tags {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.tags > :not(:last-child) {
+    margin-right: 6px
+}
+
+.tag__title {
+    font-size: .75em
+}
+
+.icon {
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1.3em;
+    color: #c3c3c3
+}
+
+.tag--author:before, .tag--comments:before, .tag--topics:before, .tag--date:before {
+    font-family: 'FontAwesome', sans-serif
+}
+
+.tag--date:before {
+    content: "\f017"
+}
+
+.tag--author:before {
+    content: "\f007"
+}
+
+.tag--comments:before {
+    content: "\f075"
+}
+
+.tag--topics:before {
+    content: "\f036"
+}
+
+.pagination {
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0 20px 30px
+}
+
+.pagination__page {
+    display: inline-block;
+    padding: 0 8px
+}
+
+.pagination__page:hover {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: .6em;
+    color: #5b5f6c
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    font-size: 1.3em;
+    font-weight: bold
+}
+
+header .speciality {
+    display: block;
+    color: #4ca5d0;
+    font-size: .8em;
+    margin-top: 8px
+}
+
+.userProfile {
+    display: flex;
+    padding: 30px
+}
+
+.userProfile__avatar {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px
+}
+
+.postsList {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border-right: 1px solid #e5e5e5
+}
+
+.breadCrumbs {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: .8em;
+    max-width: 560px;
+    width: 100%;
+    margin: 10px;
+    color: #5b5f6c
+}
+
+.breadCrumbs__item:not(:first-child):before {
+    font-family: 'FontAwesome', sans-serif;
+    content: "\f054";
+    font-size: .6em;
+    margin-left: 4px;
+    margin-right: 2px
+}
+
+.breadCrumbs__item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #5b5f6c
+}
+
+.breadCrumbs__item:last-child {
+    flex: 10 0 auto;
+    text-overflow: clip
+}
+
+.breadCrumbs__item:hover {
+    color: black
+}
+
+.post__header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-top: 1px solid #e5e5e5
+}
+
+.postBadge {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 34%;
+    margin-left: -60px;
+    margin-right: 10px;
+    color: #fff
+}
+
+.post--text .postBadge {
+    background-color: #327ea3
+}
+
+.post--text .postBadge__label:before {
+    content: "\f040"
+}
+
+.post--text .postPreview__readMore {
+    background-color: #327ea3
+}
+
+.post--text .postPreview__readMore:hover {
+    background: #2c6f8f
+}
+
+.post--text .postPreview__readMore:active, .post--text .postPreview__readMore:focus {
+    background: #1a4255
+}
+
+.post--photo .postBadge {
+    background-color: #6ca338
+}
+
+.post--photo .postBadge__label:before {
+    content: "\f030"
+}
+
+.post--photo .postPreview__readMore {
+    background-color: #6ca338
+}
+
+.post--photo .postPreview__readMore:hover {
+    background: #5f9031
+}
+
+.post--photo .postPreview__readMore:active, .post--photo .postPreview__readMore:focus {
+    background: #3a571e
+}
+
+.post--video .postBadge {
+    background-color: #e82c0c
+}
+
+.post--video .postBadge__label:before {
+    content: "\f06e"
+}
+
+.post--video .postPreview__readMore {
+    background-color: #e82c0c
+}
+
+.post--video .postPreview__readMore:hover {
+    background: #d0270b
+}
+
+.post--video .postPreview__readMore:active, .post--video .postPreview__readMore:focus {
+    background: #871a07
+}
+
+.postBadge__label {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    color: #fff;
+    border-right: 1px solid #e5e5e5
+}
+
+.postBadge__date {
+    flex: 1 1 auto;
+    text-align: center
+}
+
+.postPreview {
+    margin: 0 30px;
+    padding-bottom: 10px
+}
+
+.postPreview__title, .postPreview__img, .postPreview__description, .postPreview__readMore {
+    margin-bottom: 30px
+}
+
+.postPreview__img {
+    display: flex;
+    width: 100%;
+    height: 250px
+}
+
+.button {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    padding: .8em 4.7em .8em 1.4em;
+    color: white;
+    transition: .2s;
+    min-width: 15em;
+    font-size: .75em;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.button:before, .button:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: inherit;
+    width: 2.8em;
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1.2em;
+    transition: .2s
+}
+
+.postPreview__readMore:after {
+    content: "\F054"
+}
+
+.postPreview__readMore:hover:after {
+    animation: bounceright .3s alternate ease infinite
+}
+
+@keyframes bounceright {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(3px)
+    }
+}
+
+.asideWrapper {
+    width: 30%;
+    min-width: 200px
+}
+
+.asideWidget {
+    padding: 20px 10px;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.asideWidget__title {
+    margin-bottom: 20px
+}
+
+.asideWidget__list {
+    color: #5b5f6c
+}
+
+.u-fs-8 {
+    font-size: .8em
+}
+
+.u-mb-10:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.topic__item > :first-child :before {
+    font-family: 'FontAwesome', sans-serif;
+    content: "\f138";
+    font-size: 1.1em;
+    margin-right: 5px;
+    color: #4ca5d0
+}
+
+.topic__item > :first-child :hover {
+    color: #4ca5d0
+}
+
+.recentPost__title:hover {
+    color: #4ca5d0
+}
+
+.twitter__link {
+    display: block;
+    color: #4ca5d0
+}
+
+.asideWidget--tags .asideWidget__list {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.tag__item {
+    margin-right: 4px;
+    padding: 5px;
+    background-color: #e5e5e5;
+    margin-bottom: 4px;
+    font-size: .9em;
+    font-weight: 400
+}
+
+.tag__item:hover {
+    background-color: #1fa3e3
+}
+
+.tag__item:hover .isHover {
+    color: #fff
+}
+
+.asideWidget--calendar {
+    padding: 20px 10px;
+    font-size: .7em
+}
+
+.asideWidget--calendar table {
+    width: 90%;
+    margin: 0 auto
+}
+
+.asideWidget--calendar caption {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px
+}
+
+.asideWidget--calendar td, .asideWidget--calendar th {
+    padding: 4px;
+    text-align: center;
+    cursor: default
+}
+
+.asideWidget--calendar th {
+    color: #1fa3e3
+}
+
+.asideWidget--calendar .active, .asideWidget--calendar .toDay {
+    background-color: #e5e5e5
+}
+
+.asideWidget--calendar td:hover {
+    background-color: #1fa3e3;
+    color: white
+}
+
+.asideWidget__commentator {
+    color: #4ca5d0
+}
+
+.recentComment__item:hover .isHover {
+    color: #4ca5d0
+}
+
+@media screen and (min-width: 0) and (max-width: 320px) {
+    .post__header {
+        height: 40px
+    }
+
+    .post__header .tags {
+        max-width: 270px
+    }
+
+    .postBadge {
+        margin-left: 0;
+        font-size: .8em;
+        height: 40px
+    }
+
+    .postBadge__label {
+        width: 40px
+    }
+
+    .breadCrumbs {
+        max-width: 400px
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .wrapper {
+        width: 100%
+    }
+
+    main {
+        flex-direction: column
+    }
+
+    .userProfile {
+        padding: 10px
+    }
+
+    .userProfile__avatar {
+        width: 75px;
+        height: 75px;
+        margin-right: 10px
+    }
+
+    .postsList {
+        border-right: 0
+    }
+
+    .postsList, .asideWrapper {
+        width: 100%
+    }
+
+    .post__header {
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e5e5e5
+    }
+
+    .post__header .tags {
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0
+    }
+
+    .asideWidget--recentPost .tags {
+        flex-direction: row
+    }
+
+    .postPreview {
+        margin: 0
+    }
+
+    .postPreview__title, .postPreview__img, .postPreview__description, .postPreview__read-more-button {
+        margin-bottom: 10px
+    }
+
+    .postPreview__img {
+        width: 100%;
+        height: 240px
+    }
+
+    .postBadge {
+        width: 100%;
+        height: 40px;
+        margin: 0
+    }
+
+    .asideWidget--calendar {
+        margin: 0 auto;
+        max-width: 300px
+    }
+
+    .pagination {
+        padding: 10px 0;
+        font-size: .8em
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .wrapper {
+        width: 70%
+    }
+
+    .asideWrapper {
+        width: 100%
+    }
+
+    main {
+        flex-direction: column
+    }
+
+    .userProfile {
+        padding: 10px
+    }
+
+    .userProfile__avatar {
+        width: 75px;
+        height: 75px;
+        margin-right: 10px
+    }
+
+    .postsList {
+        width: 100%
+    }
+
+    .post__header {
+        height: 80px;
+        flex-direction: column;
+        border-bottom: 1px solid #e5e5e5
+    }
+
+    .post__header .tags {
+        margin: 10px 0
+    }
+
+    .tags {
+        flex-direction: column;
+        width: 100%
+    }
+
+    .postPreview {
+        margin: 0
+    }
+
+    .postPreview__title, .postPreview__img, .postPreview__description, .postPreview__read-more-button {
+        margin-bottom: 10px
+    }
+
+    .postPreview__img {
+        width: 100%;
+        height: 240px
+    }
+
+    .postBadge {
+        width: 100%;
+        height: 40px;
+        margin: 0
+    }
+
+    .asideWidget {
+        width: 100%
+    }
+
+    .asideWidget--calendar {
+        margin: 0 auto;
+        max-width: 300px
+    }
+
+    .pagination {
+        padding: 10px 0;
+        font-size: .8em
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .wrapper {
+        width: 80%
+    }
+
+    .postPreview {
+        margin-left: 15px;
+        margin-right: 15px
+    }
+
+    .asideWidget--calendar {
+        max-width: 300px
+    }
+}

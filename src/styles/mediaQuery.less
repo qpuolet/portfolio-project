@@ -1,217 +1,195 @@
 @media screen and (min-width: 0px) and (max-width: 320px) {
-    .badge {
-        margin-left: 0;
+  .post__header {
+    height: 40px;
+
+    .tags {
+      max-width: 270px;
     }
+  }
+
+  .postBadge {
+    margin-left: 0;
+    font-size: .8em;
+    height: 40px;
+  }
+
+  .postBadge__label {
+    width: 40px;
+  }
+
+  .breadCrumbs {
+    max-width: 400px;
+  }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    .wrapper {
-        width: 95%;
-    }
+  .wrapper {
+    width: 100%;
+  }
 
-    main {
-        flex-direction: column;
-        min-width: 320px;
-    }
+  main {
+    flex-direction: column;
+  }
 
-    .userProfile {
-        padding: 10px;
-    }
-    .userProfileAvatar {
-        width: 75px;
-        height: 75px;
-        margin-right: 10px;
-    }
+  .userProfile {
+    padding: 10px;
+  }
 
-    h3 {
-        font-size: 1em;
-    }
+  .userProfile__avatar {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  }
 
-    h4 {
-        font-size: 0.9em;
-    }
+.postsList {
+  border-right: 0;
+}
 
-    p {
-        font-size: 0.8em;
-    }
+  .postsList,
+  .asideWrapper {
+    width: 100%;
+  }
 
-    .blogPosts {
-        width: 100%;
-    }
-    .blogTitle {
-        margin-left: 5px;
-        height: 20px;
-        p {
-            margin: 2px 0;
-        }
-    }
-
-    .articleHeader {
-        flex-direction: column;
-        height: 125px;
-        margin-bottom: 0;
-    }
+  .post__header {
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid @border-line;
 
     .tags {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
+      flex-direction: column;
+      width: 100%;
+      margin: 10px 0;
     }
+  }
 
-    .recentPost .tags {
-        flex-direction: row;
-    }
+  .asideWidget--recentPost .tags {
+    flex-direction: row;
+  }
 
-    .authorInfo,
-    .comments,
-    .postTopic {
-        margin-bottom: 20px;
-    }
+  .postPreview {
+    margin: 0;
+  }
 
-    .articleBody {
-        margin: 0;
-    }
+  .postPreview__title,
+  .postPreview__img,
+  .postPreview__description,
+  .postPreview__read-more-button  {
+    margin-bottom: 10px;
+  }
 
-    .articleTitle,
-    .articleReadMore,
-    .articleDescription,
-    .articlePhotoPreview {
-        margin-bottom: 10px;
-    }
+  .postPreview__img {
+    width: 100%;
+    height: 240px;
+  }
 
-    .articlePhotoPreview {
-        width: 100%;
-        height: 240px;
-    }
+  .postBadge {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+  }
 
-    .badge{
-        width: 100%;
-        margin-left: 0;
-    }
+  .asideWidget--calendar {
+    margin: 0 auto;
+    max-width: 300px;
+  }
 
-    .secondary {
-        width: 100%;
-    }
-
-    .calendar {
-        margin: 0 auto;
-        max-width: 300px;
-    }
-
-    .pagination {
-        padding: 10px 0;
-        font-size: 0.8em;
-    }
+  .pagination {
+    padding: 10px 0;
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
-    .wrapper {
-        width: 70%;
-    }
+  .wrapper {
+    width: 70%;
+  }
 
-    main {
-        flex-direction: column;
-    }
+  .asideWrapper {
+    width: 100%;
+  }
 
-    .userProfile {
-        padding: 10px;
-    }
-    .userProfileAvatar {
-        width: 75px;
-        height: 75px;
-        margin-right: 10px;
-    }
+  main {
+    flex-direction: column;
+  }
 
-    h3 {
-        font-size: 1em;
-    }
+  .userProfile {
+    padding: 10px;
+  }
 
-    h4 {
-        font-size: 0.9em;
-    }
+  .userProfile__avatar {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  }
 
-    p {
-        font-size: 0.8em;
-    }
+  .postsList {
+    width: 100%;
+  }
 
-    .blogPosts {
-        width: 100%;
-    }
-    .blogTitle {
-        margin-left: 5px;
-        height: 20px;
-        p {
-            margin: 2px 0;
-        }
-    }
-
-    .articleHeader {
-        flex-direction: column;
-        height: 125px;
-        margin-bottom: 0;
-    }
-
+  .post__header {
+    height: 80px;
+    flex-direction: column;
+    border-bottom: 1px solid @border-line;
     .tags {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
+      margin: 10px 0;
     }
+  }
 
-    .recentPost .tags {
-        flex-direction: row;
-    }
+  .tags {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .authorInfo, .comments, .postTopic {
-        margin-bottom: 20px;
-    }
+  .postPreview {
+    margin: 0;
+  }
 
-    .articleBody {
-        margin: 0;
-    }
+  .postPreview__title,
+  .postPreview__img,
+  .postPreview__description,
+  .postPreview__read-more-button  {
+    margin-bottom: 10px;
+  }
 
-    .articleTitle,
-    .articleReadMore,
-    .articleDescription,
-    .articlePhotoPreview {
-        margin-bottom: 10px;
-    }
+  .postPreview__img {
+    width: 100%;
+    height: 240px;
+  }
 
-    .articlePhotoPreview {
-        width: 100%;
-        height: 240px;
-    }
+  .postBadge{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+  }
 
-    .badge{
-        width: 100%;
-        margin-left: 0;
-    }
+  .asideWidget {
+    width: 100%;
+  }
 
-    .secondary {
-        width: 100%;
-    }
+  .asideWidget--calendar {
+    margin: 0 auto;
+    max-width: 300px;
+  }
 
-    .calendar {
-        margin: 0 auto;
-        max-width: 300px;
-    }
-
-    .pagination {
-        padding: 10px 0;
-        font-size: 0.8em;
-    }
+  .pagination {
+    padding: 10px 0;
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
-    .wrapper {
-        width: 80%;
-    }
+  .wrapper {
+    width: 80%;
+  }
 
-    .articleBody {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+  .postPreview {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 
-    .calendar {
-        max-width: 300px;
-    }
+  .asideWidget--calendar {
+    max-width: 300px;
+  }
 }
