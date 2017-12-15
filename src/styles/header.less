@@ -1,26 +1,42 @@
+@import "responsive";
+
 header {
-    width: 100%;
-    border-bottom: 1px solid @border-line;
-    background-color: @main-background-color;
-    font-size: 1.3em;
-    font-weight: bold;
+  border-bottom: 1px solid @border-line;
+  background-color: @main-background-color;
+  font-size: 1.3em;
+  font-weight: bold;
 
-    .speciality {
-      display: block;
-      color: #4ca5d0;
+  .speciality {
+    display: block;
+    color: #4ca5d0;
+    font-size: .8em;
+    margin-top: 8px;
+  }
 
-      font-size: .8em;
-      margin-top: 8px;
-    }
+  .responsive(@media-mobileMin, @media-mobileMax,  {
+    margin-left: 10px;
+    margin-right: 10px;
+  })
+
 }
 
 .userProfile {
-    display: flex;
-    padding: 30px;
+  display: flex;
+  padding: 30px;
+
+  .responsive(@media-mobileMin, @media-smartphonesMax,  {
+    padding: 10px;
+  });
 }
 
 .userProfile__avatar {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+
+  .responsive(@media-mobileMin, @media-smartphonesMax,  {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  });
 }

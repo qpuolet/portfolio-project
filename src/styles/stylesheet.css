@@ -4,6 +4,11 @@ a {
 body {
   background-color: #f3f3f3;
 }
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  body {
+    background-color: #ffffff;
+  }
+}
 .gradient {
   position: fixed;
   height: 2px;
@@ -19,6 +24,18 @@ body {
   margin: 0 auto;
   padding-bottom: 30px;
 }
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .wrapper {
+    padding-top: 20px;
+    min-width: 320px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .wrapper {
+    width: 70%;
+  }
+}
 .socialHub {
   display: flex;
   justify-content: flex-end;
@@ -27,6 +44,11 @@ body {
 }
 .socialHub .icon {
   margin-right: 20px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .socialHub {
+    margin-bottom: 10px;
+  }
 }
 .icon:hover {
   color: #4ca5d0;
@@ -54,11 +76,18 @@ body {
 }
 main {
   display: flex;
-  min-width: 600px;
-  width: 100%;
   background-color: #ffffff;
 }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  main {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 .tags {
+  display: flex;
+  flex-wrap: wrap;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -96,6 +125,12 @@ main {
   border-top: 1px solid #e5e5e5;
   padding: 20px 0 20px 30px;
 }
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .pagination {
+    padding: 10px 0;
+    font-size: 0.8em;
+  }
+}
 .pagination__page {
   display: inline-block;
   padding: 0 8px;
@@ -111,8 +146,13 @@ footer {
   font-size: 0.6em;
   color: #5b5f6c;
 }
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  footer {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 header {
-  width: 100%;
   border-bottom: 1px solid #e5e5e5;
   background-color: #ffffff;
   font-size: 1.3em;
@@ -124,14 +164,32 @@ header .speciality {
   font-size: .8em;
   margin-top: 8px;
 }
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  header {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 .userProfile {
   display: flex;
   padding: 30px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .userProfile {
+    padding: 10px;
+  }
 }
 .userProfile__avatar {
   width: 100px;
   height: 100px;
   margin-right: 20px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .userProfile__avatar {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  }
 }
 .postsList {
   display: flex;
@@ -139,12 +197,16 @@ header .speciality {
   width: 70%;
   border-right: 1px solid #e5e5e5;
 }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .postsList {
+    border-right: 0;
+    width: 100%;
+  }
+}
 .breadCrumbs {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   font-size: 0.8em;
-  max-width: 560px;
-  width: 100%;
   margin: 10px;
   color: #5b5f6c;
 }
@@ -176,6 +238,19 @@ header .speciality {
   margin-bottom: 30px;
   border-top: 1px solid #e5e5e5;
 }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .post__header {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .post__header .tags {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
 .postBadge {
   display: flex;
   align-items: center;
@@ -184,6 +259,13 @@ header .speciality {
   margin-left: -60px;
   margin-right: 10px;
   color: #ffffff;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .postBadge {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+  }
 }
 .post--text .postBadge {
   background-color: #327ea3;
@@ -251,16 +333,29 @@ header .speciality {
   margin: 0 30px;
   padding-bottom: 10px;
 }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .postPreview {
+    margin: 0;
+  }
+}
 .postPreview__title,
 .postPreview__img,
 .postPreview__description,
 .postPreview__readMore {
   margin-bottom: 30px;
 }
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .postPreview__title,
+  .postPreview__img,
+  .postPreview__description,
+  .postPreview__readMore {
+    margin-bottom: 10px;
+  }
+}
 .postPreview__img {
-  display: flex;
   width: 100%;
-  height: 250px;
+  height: auto;
+  max-height: 250px;
 }
 .button {
   font-family: 'Nunito', sans-serif;
@@ -268,7 +363,7 @@ header .speciality {
   padding: .8em  4.7em .8em 1.4em;
   color: white;
   transition: .2s;
-  min-width: 15em;
+  max-width: 8em;
   font-size: 0.75em;
   text-transform: uppercase;
   font-weight: bold;
@@ -277,12 +372,15 @@ header .speciality {
 .button:after {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -1em;
   padding-bottom: inherit;
   width: 2.8em;
   font-family: 'FontAwesome', sans-serif;
   font-size: 1.2em;
   transition: .2s;
+}
+.postPreview__readMore a {
+  color: #fff;
 }
 .postPreview__readMore:after {
   content: "\F054";
@@ -302,9 +400,19 @@ header .speciality {
   width: 30%;
   min-width: 200px;
 }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .asideWrapper {
+    width: 100%;
+  }
+}
 .asideWidget {
   padding: 20px 10px;
   border-bottom: 1px solid #e5e5e5;
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .asideWidget {
+    padding: 20px 0;
+  }
 }
 .asideWidget__title {
   margin-bottom: 20px;
@@ -354,32 +462,41 @@ header .speciality {
   color: #fff;
 }
 .asideWidget--calendar {
-  padding: 20px 10px;
+  padding-left: 0;
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .asideWidget--calendar {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+}
+.calendar {
+  margin: 0 auto;
   font-size: 0.7em;
 }
-.asideWidget--calendar table {
+.calendar table {
   width: 90%;
   margin: 0 auto;
 }
-.asideWidget--calendar caption {
+.calendar caption {
   font-size: 1.4em;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.asideWidget--calendar td,
-.asideWidget--calendar th {
+.calendar td,
+.calendar th {
   padding: 4px;
   text-align: center;
   cursor: default;
 }
-.asideWidget--calendar th {
+.calendar th {
   color: #1fa3e3;
 }
-.asideWidget--calendar .active,
-.asideWidget--calendar .toDay {
+.calendar .active,
+.calendar .toDay {
   background-color: #e5e5e5;
 }
-.asideWidget--calendar td:hover {
+.calendar td:hover {
   background-color: #1fa3e3;
   color: white;
 }
@@ -388,151 +505,6 @@ header .speciality {
 }
 .recentComment__item:hover .isHover {
   color: #4ca5d0;
-}
-@media screen and (min-width: 0px) and (max-width: 320px) {
-  .post__header {
-    height: 40px;
-  }
-  .post__header .tags {
-    max-width: 270px;
-  }
-  .postBadge {
-    margin-left: 0;
-    font-size: .8em;
-    height: 40px;
-  }
-  .postBadge__label {
-    width: 40px;
-  }
-  .breadCrumbs {
-    max-width: 400px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .wrapper {
-    width: 100%;
-  }
-  main {
-    flex-direction: column;
-  }
-  .userProfile {
-    padding: 10px;
-  }
-  .userProfile__avatar {
-    width: 75px;
-    height: 75px;
-    margin-right: 10px;
-  }
-  .postsList {
-    border-right: 0;
-  }
-  .postsList,
-  .asideWrapper {
-    width: 100%;
-  }
-  .post__header {
-    flex-direction: column;
-    height: 100%;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  .post__header .tags {
-    flex-direction: column;
-    width: 100%;
-    margin: 10px 0;
-  }
-  .asideWidget--recentPost .tags {
-    flex-direction: row;
-  }
-  .postPreview {
-    margin: 0;
-  }
-  .postPreview__title,
-  .postPreview__img,
-  .postPreview__description,
-  .postPreview__read-more-button {
-    margin-bottom: 10px;
-  }
-  .postPreview__img {
-    width: 100%;
-    height: 240px;
-  }
-  .postBadge {
-    width: 100%;
-    height: 40px;
-    margin: 0;
-  }
-  .asideWidget--calendar {
-    margin: 0 auto;
-    max-width: 300px;
-  }
-  .pagination {
-    padding: 10px 0;
-    font-size: 0.8em;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .wrapper {
-    width: 70%;
-  }
-  .asideWrapper {
-    width: 100%;
-  }
-  main {
-    flex-direction: column;
-  }
-  .userProfile {
-    padding: 10px;
-  }
-  .userProfile__avatar {
-    width: 75px;
-    height: 75px;
-    margin-right: 10px;
-  }
-  .postsList {
-    width: 100%;
-  }
-  .post__header {
-    height: 80px;
-    flex-direction: column;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  .post__header .tags {
-    margin: 10px 0;
-  }
-  .tags {
-    flex-direction: column;
-    width: 100%;
-  }
-  .postPreview {
-    margin: 0;
-  }
-  .postPreview__title,
-  .postPreview__img,
-  .postPreview__description,
-  .postPreview__read-more-button {
-    margin-bottom: 10px;
-  }
-  .postPreview__img {
-    width: 100%;
-    height: 240px;
-  }
-  .postBadge {
-    width: 100%;
-    height: 40px;
-    margin: 0;
-  }
-  .asideWidget {
-    width: 100%;
-  }
-  .asideWidget--calendar {
-    margin: 0 auto;
-    max-width: 300px;
-  }
-  .pagination {
-    padding: 10px 0;
-    font-size: 0.8em;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .wrapper {

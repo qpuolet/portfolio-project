@@ -1,11 +1,21 @@
+@import "responsive";
+
 .asideWrapper {
   width: 30%;
   min-width: 200px;
+
+  .responsive(@media-mobileMin, @media-smartphonesMax, {
+    width: 100%;
+  });
 }
 
 .asideWidget {
   padding: 20px 10px;
   border-bottom: 1px solid  @border-line;
+
+  .responsive(@media-mobileMin, @media-mobileMax, {
+    padding: 20px 0;
+  });
 }
 
 .asideWidget__title {
@@ -75,7 +85,16 @@
 }
 
 .asideWidget--calendar {
-  padding: 20px 10px;
+  padding-left: 0;
+
+  .responsive(@media-mobileMin, @media-mobileMax, {
+    margin: 0 auto;
+    max-width: 300px;
+  });
+}
+
+.calendar {
+  margin: 0 auto;
   font-size: 0.7em;
 
   table {

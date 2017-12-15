@@ -1,17 +1,23 @@
+@import "responsive";
+
 .postsList {
   display: flex;
   flex-direction: column;
   width: 70%;
   border-right: 1px solid @border-line;
+
+  .responsive(@media-mobileMin, @media-smartphonesMax, {
+    border-right: 0;
+    width: 100%;
+  });
 }
+
 
 // breadCrumbs
 .breadCrumbs {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   font-size: 0.8em;
-  max-width: 560px;
-  width: 100%;
   margin: 10px;
   color: @secondary-text;
 }
@@ -48,8 +54,19 @@
   width: 100%;
   margin-bottom: 30px;
   border-top: 1px solid @border-line;
-}
 
+  .responsive(@media-mobileMin, @media-smartphonesMax, {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid @border-line;
+    .tags {
+      flex-direction: column;
+      width: 100%;
+      margin: 10px 0;
+    }
+  });
+}
 // badge of post
 .postBadge {
   display: flex;
@@ -59,6 +76,12 @@
   margin-left: -60px;
   margin-right: 10px;
   color: @badge-text-color;
+
+  .responsive(@media-mobileMin, @media-smartphonesMax, {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+  });
 }
 
 // decorating post
@@ -126,6 +149,10 @@
 .postPreview {
   margin: 0 30px;
   padding-bottom: 10px;
+
+  .responsive(@media-mobileMin, @media-smartphonesMax, {
+    margin: 0;
+  })
 }
 
 .postPreview__title,
@@ -133,12 +160,16 @@
 .postPreview__description,
 .postPreview__readMore {
   margin-bottom: 30px;
+
+  .responsive(@media-mobileMin, @media-mobileMax, {
+    margin-bottom: 10px;
+  });
 }
 
 .postPreview__img {
-  display: flex;
   width: 100%;
-  height: 250px;
+  height: auto;
+  max-height: 250px;
 }
 
 
@@ -148,7 +179,7 @@
   padding: .8em  4.7em .8em 1.4em;
   color: white;
   transition: .2s;
-  min-width: 15em;
+  max-width: 8em;
   font-size: 0.75em;
   text-transform: uppercase;
   font-weight: bold;
@@ -156,7 +187,7 @@
   &:after {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -1em;
     padding-bottom: inherit;
     width: 2.8em;
     font-family: 'FontAwesome', sans-serif;
@@ -164,7 +195,6 @@
     transition: .2s;
   }
 }
-
 
 .decorateButton(@color) {
   background-color: @color;
@@ -178,6 +208,11 @@
 }
 
 .postPreview__readMore {
+
+  a {
+    color: #fff;
+  }
+
   &:after {
     content: "\F054";
   }

@@ -1,0 +1,5 @@
+.responsive(@minWidth;@maxWidth; @rules) {
+  @media only screen and (min-width: @minWidth) and (max-width: @maxWidth) {
+    @rules();
+  }
+}

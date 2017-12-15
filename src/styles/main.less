@@ -1,13 +1,16 @@
+@import "responsive";
+
 // typography
 a {
   color: @secondary-text;
 }
 body {
   background-color: @body-background-color;
+
+  .responsive(@media-mobileMin, @media-mobileMax,  {
+    background-color: @main-background-color;
+  })
 }
-
-
-
 
 .gradient {
   position: fixed;
@@ -29,6 +32,16 @@ body {
   font-family: 'Nunito', sans-serif;
   margin: 0 auto;
   padding-bottom: 30px;
+
+  .responsive(@media-mobileMin, @media-mobileMax,  {
+    padding-top: 20px;
+    min-width: 320px;
+    width: 100%;
+  });
+
+  .responsive(@media-mobileMax+1, @media-smartphonesMax,  {
+    width: 70%;
+  });
 }
 
 .socialHub {
@@ -40,6 +53,9 @@ body {
   .icon {
     margin-right: 20px;
   }
+  .responsive(@media-mobileMin, @media-smartphonesMax,  {
+    margin-bottom: 10px;
+  })
 }
 
 .icon:hover {
@@ -76,13 +92,19 @@ body {
 
 main {
   display: flex;
-  min-width: 600px;
-  width: 100%;
   background-color: @main-background-color;
+
+  .responsive(@media-mobileMin, @media-smartphonesMax,  {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+  });
 }
 
 // tags
 .tags {
+  display: flex;
+  flex-wrap: wrap;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -129,6 +151,11 @@ main {
 .pagination {
   border-top: 1px solid @border-line;
   padding: 20px 0 20px 30px;
+
+  .responsive(@media-mobileMin, @media-mobileMax,  {
+    padding: 10px 0;
+    font-size: 0.8em;
+  })
 }
 
 .pagination__page {
@@ -148,4 +175,9 @@ footer {
   font-weight: bold;
   font-size: 0.6em;
   color: @secondary-text;
+
+  .responsive(@media-mobileMin, @media-mobileMax,  {
+    margin-left: 10px;
+    margin-right: 10px;
+  })
 }
