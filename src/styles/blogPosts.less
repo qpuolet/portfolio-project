@@ -143,11 +143,15 @@
 .postBadge__date {
   flex: 1 1 auto;
   text-align: center;
+
+  .responsive(@media-smartphonesMax+1, @media-tabletMax, {
+    font-size: 0.9em;
+  })
 }
 
 // body of article
 .postPreview {
-  margin: 0 30px;
+  margin: 0 15px;
   padding-bottom: 10px;
 
   .responsive(@media-mobileMin, @media-smartphonesMax, {
