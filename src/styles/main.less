@@ -27,7 +27,6 @@ body {
 .wrapper {
   padding-top: 44px;
   width: 64%;
-  min-width: 600px;
   max-width: 820px;
   font-family: 'Nunito', sans-serif;
   margin: 0 auto;
@@ -42,23 +41,28 @@ body {
   .responsive(@media-mobileMax+1, @media-smartphonesMax,  {
     width: 70%;
   });
+
+  .responsive(@media-smartphonesMax+1, @media-tabletMax, {
+    width: 80%;
+  })
 }
 
 .socialHub {
   display: flex;
   justify-content: flex-end;
-  margin-right: 0.8em;
+  margin-bottom: 0.5em;
   color: @social-icon;
 
   .icon {
-    margin-right: 20px;
+    margin-right: 0.8em;
+
+    .responsive(@media-mobileMin, @media-smartphonesMax,  {
+      font-size: 1em;
+    })
   }
-  .responsive(@media-mobileMin, @media-smartphonesMax,  {
-    margin-bottom: 10px;
-  })
 }
 
-.icon:hover {
+.icon:not(.postBadge):hover {
   color: @text-highlighting;
 }
 
@@ -96,8 +100,8 @@ main {
 
   .responsive(@media-mobileMin, @media-smartphonesMax,  {
     flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   });
 }
 
