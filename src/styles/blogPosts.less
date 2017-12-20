@@ -228,25 +228,34 @@
 }
 
 @keyframes bounceright {
-  from { transform: translateX(0); }
-  to   { transform: translateX(3px); }
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(3px);
+  }
 }
 
-.sliderItem__image {
+.sliderItem__image, .sliderItem__image--1{
   width: 100%;
   vertical-align: top;
   height: auto;
   max-height: 260px;
+
 }
 
 .postPreview__slider {
   position: relative;
   width: 100%;
   margin-bottom: 12px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .sliderItem {
   display: none;
+  position: relative;
 }
 
 .slider__arrowLeft,
@@ -260,12 +269,17 @@
   top: 0;
   bottom: 0;
   padding: 0px 10px;
+  background: none repeat scroll 0 0 transparent;
+
+  &:focus {
+    outline: 0;
+  }
 
   &:hover {
     color: rgba(0,0,0, 0.4);
+    cursor: pointer;
   }
 }
-
 
 .slider__arrowLeft {
   left: 0;
@@ -283,7 +297,7 @@
 
 @keyframes fade {
   from {
-    opacity: .1
+    opacity: .7
   }
   to {
     opacity: 1
