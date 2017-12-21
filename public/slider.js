@@ -38,10 +38,10 @@ let Slider = {
     isArrow: true,
     slideCount: 0,
     coordXDown: 0,
-    coordXUp: 0,
+    cordXUp: 0,
   },
 
-  initArrows: function() {
+  initArrows() {
     this.prevArrow = document.createElement('button');
     this.prevArrow.className = 'slider__arrowLeft';
     this.prevArrow.innerHTML = '<i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>';
@@ -59,12 +59,14 @@ let Slider = {
     this.node.appendChild(fragment);
   },
 
-  initMouseReaction: function() {
+  initMouseHandlers() {
     this.node.onmousedown = this.mouseDown.bind(this);
     this.node.onmouseup = this.mouseUp.bind(this);
+    this.node.ontouchstart = this.touchDown.bind(this);
+    this.node.ontouchend = this.touchUp.bind(this);
   },
 
-  nextSlide: function() {
+  nextSlide() {
     // changing prevSlide index
     this.config.prevSlide = this.config.curSlide;
 
@@ -86,7 +88,7 @@ let Slider = {
     this.goToSlide(this.config.curSlide);
   },
 
-  prevSlide: function() {
+  prevSlide() {
     // changing nextSlide index
     this.config.nextSlide = this.config.curSlide;
 
@@ -108,51 +110,60 @@ let Slider = {
     this.goToSlide(this.config.curSlide);
   },
 
-  mouseDown: function(event) {
-    console.log(event.clientX);
-
+  mouseDown(event) {
+    console.log('down', event.clientX);
     this.config.coordXDown = event.clientX;
   },
 
-  mouseUp: function(event) {
-    console.log(event.clientX);
+  mouseUp() {
+    console.log('up', event.clientX);
     this.config.coordXUp = event.clientX;
     this.swipe();
   },
 
-  swipe: function () {
+  touchDown() {
+    console.log('touchDown', event.touches[0].clientX);
+    this.config.coordXDown = event.touches[0].clientX;
+    console.log(this.config.coordXDown);
+  },
+
+  touchUp() {
+    console.log('touchUp', event.changedTouches[0].clientX);
+    this.config.coordXUp = event.changedTouches[0].clientX;
+    this.swipe();
+  },
+
+  swipe () {
+
     let swipeX = this.config.coordXDown - this.config.coordXUp;
     console.log(swipeX);
-    if (swipeX < 0 && swipeX < -120) { this.prevSlide()}
-    if(swipeX > 0 && swipeX > 120) { this.nextSlide() }
+    let swipeSize = 120;
+    if (window.matchMedia("(max-width: 480px)").matches) swipeSize = 60;
+    if (swipeX < 0 && swipeX < -swipeSize) { this.prevSlide()}
+    if(swipeX > 0 && swipeX > swipeSize) { this.nextSlide() }
   },
 
-  initSlide: function() {
-    let curSlide = Array.from(this.node.getElementsByClassName('sliderItem'));
-    curSlide[0].style.display = 'block';
-
+  initSlide() {
+    let curSlide = Array.from(this.node.getElementsByClassName('sliderItem'))[0];
+    curSlide.classList.add("aTemp");
   },
 
-  init: function(node, config) {
+  init(node, config) {
     this.config = Object.assign({}, this.config, config || {});
     this.config.slideCount = node.children.length - 1;
     if (this.config.slideCount < 1) return;
     this.node = node;
-    // this.config.slideCount = this.node.getElementsByClassName('sliderItem').length;
     node.Slider = this;
     this.initSlide();
     this.initArrows();
-    this.initMouseReaction();
-
-    console.log(this.config)
+    this.initMouseHandlers();
   },
 
-  goToSlide: function(x) {
+  goToSlide(x) {
     console.log('goToSlide', x);
     let curSlide = Array.from(this.node.getElementsByClassName('sliderItem'));
-    curSlide.forEach(slide => slide.style.display = 'none');
-    curSlide[x].style.display = 'block';
-
+    curSlide.forEach(slide => slide.classList.remove('aTemp'));
+    curSlide[x].classList.add('aTemp');
   },
 
 };
