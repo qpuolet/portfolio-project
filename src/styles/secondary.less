@@ -1,0 +1,278 @@
+@import "variables";
+@import "responsive";
+@import "fontAwesome";
+
+
+.cardList {
+  width:100%;
+}
+
+.card {
+  position: relative;
+}
+
+.card:not(:last-child) {
+  border-bottom: 1px solid @c-borderLine;
+}
+
+// show/hide card's body
+
+.spoilerSwitcher {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  -webkit-appearance: none;
+  border: 1px solid @c-borderLine;
+  padding: 4px;
+  color: @c-spoilerSwitcher;
+
+  .responsive(@mq-mobileMin, @mq-smartphoneMax, {
+    top: 4px;
+    border: 0;
+  })
+}
+
+.spoilerSwitcher {
+
+  &:after {
+    .fontAwesome("\f077", 2em);
+  }
+
+  &:hover,
+  &:checked {
+    color: @c-spoilerSwitcherHighlighting;
+    border-color: @c-spoilerSwitcherHighlighting;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:checked {
+    transform: rotate(180deg);
+  }
+
+  &:checked + .card__header>.blockBadge>.blockBadge__tittle {
+    color: @c-blockBadgeTittleHighlighting;
+  }
+
+  &:checked~.card__body {
+    height: auto;
+    margin: 40px 0;
+    transition: opacity 2s ease;
+  }
+
+  &:not(:checked)+.card__header>.blockBadge {
+    background-color: transparent;
+  }
+}
+
+.card__body {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 0;
+  padding: 0 35px;
+}
+
+.card__image {
+  width: 95%;
+  height: auto;
+}
+
+.card--resume {
+  .blockBadge,
+  .blockBadge__label {
+    background-color: @c-blockBadge__resume;
+  }
+
+  .blockBadge__label:after {
+    .fontAwesome("\f036", 1.3em);
+  }
+}
+
+.card--portfolio {
+  .blockBadge,
+  .blockBadge__label {
+    background-color: @c-blockBadge__portfolio;
+  }
+
+  .blockBadge__label:after {
+    .fontAwesome("\f0b1", 1.3em);
+  }
+}
+
+.card--contacts {
+  .blockBadge,
+  .blockBadge__label  {
+    background-color: @c-blockBadge__contacts;
+  }
+
+  .blockBadge__label:after {
+    .fontAwesome("\f0e0", 1.3em);
+  }
+}
+
+.card .blockBadge {
+  max-width: 100%;
+}
+
+// Contact Form
+
+.contactFormWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.contactForm {
+  width: 67%;
+  margin-right: 30px;
+}
+
+.contactForm__selectTittleWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 30px;
+  background-color: rgba(0,0,0, 0.3);
+  margin-bottom: 15px;
+}
+
+.contactForm__selectTittle {
+  position: absolute;
+  text-indent: 30px;
+  width: calc(~"100% + 14px");
+  height: 100%;
+  background-color: transparent;
+  opacity: 0.7;
+  color: @c-selectText;
+}
+
+.contactForm__selectArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @c-selectArrowBackground;
+  height:100%;
+  width: 30px;
+  z-index: -1;
+  border-radius: 4px;
+
+  &:before {
+    .fontAwesome("\f078", 1em);
+    color: @c-selectArrowIcon;
+  }
+}
+
+.contactForm__selectTittle {
+
+  option {
+    background-color: @c-selectOptionBackground;
+    font-size: 1.2em;
+  }
+
+  &:focus + .contactForm__selectArrow {
+    background-color: rgba(255,255,255, 0.7);
+  }
+
+  &:focus + .contactForm__selectArrow:before {
+    color: @c-selectArrowIcon--checked;
+  }
+
+}
+
+.contactForm__input {
+  height: 30px;
+  background-color: @c-inputBackground;
+  width: 100%;
+}
+
+.contactForm__input:focus,
+.contactForm__inputMessage:focus,
+.contactForm__selectTittle:focus {
+  outline: @c-inputOutline auto 5px;
+}
+
+.contactForm__inputMessage {
+  width: 100%;
+  height: 110px;
+  resize: none;
+  background-color: @c-inputBackground;
+}
+
+.contactForm__inputWrapper {
+  display: inline-block;
+  margin-top: 15px;
+  width:  50%;
+
+  &:first-of-type {
+    margin-right: 20px;
+  }
+}
+
+.contactForm__inputMessageWrapper,
+.contactForm__inputWrapper {
+
+  label {
+    display: block;
+    color: @c-inputTittle;
+    margin-right: 15px;
+    font-size: .8em;
+  }
+}
+
+.contactForm__input,
+.contactForm__inputMessage {
+  text-indent: 5px;
+  color: @c-inputText;
+}
+
+.contactForm__inputMessageWrapper {
+  margin-top: 15px;
+}
+
+label:after {
+  .fontAwesome("\f069", 0.5em);
+  color: @c-asterisks;
+  margin-left: 4px;
+}
+
+.contactForm__submitForm {
+  margin-top: 24px;
+  text-transform: uppercase;
+  background-color: @c-buttonBackground;
+  color: @c-buttonText;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 0.75em;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: @c-buttonActive;
+    color: @c-borderLine;
+  }
+}
+
+.vCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: @c-vCardBackground;
+  height: 72%;
+  padding: 0 30px 25px 30px;
+}
+
+.vCard__title{
+  padding-top: 24px;
+  font-weight: bold;
+  font-size: .85em;
+  color: @c-vCardTitle;
+}
+
+.temp {
+  display: flex;
+  justify-content: space-between;
+}

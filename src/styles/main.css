@@ -1,49 +1,177 @@
+a {
+  color: #878787;
+}
 body {
-  background-color: #f3f3f3;
+  background-color: #141414;
+  overflow-y: scroll;
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  body {
+    background-color: #282828;
+  }
+}
+.gradient {
+  position: fixed;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #327ea3 20%, #4ca5d0 20%, #4ca5d0 40%, #6ca338 40%, #6ca338 60%, #ffbc38 60%, #ffbc38 80%, #e82c0c 80%);
 }
 .wrapper {
-  padding-top: 100px;
+  padding-top: 44px;
   width: 64%;
-  min-width: 320px;
   max-width: 820px;
   font-family: 'Nunito', sans-serif;
   margin: 0 auto;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .wrapper {
+    padding-top: 20px;
+    min-width: 320px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+.socialHub {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 100px;
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+  color: #3b3b3b;
+}
+.socialHub > :hover {
+  color: #4794ba;
+}
+.socialHub > :not(:last-child) {
+  margin-right: 0.8em;
+}
+.socialHub--rss:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f09e";
+  font-size: 1.3em;
+}
+.socialHub--facebook:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f09a";
+  font-size: 1.3em;
+}
+.socialHub--twitter:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f099";
+  font-size: 1.3em;
+}
+.socialHub--google:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f0d5";
+  font-size: 1.3em;
+}
+.socialHub--linkedin:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f0e1";
+  font-size: 1.3em;
+}
+.socialHub--dribble:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f17d";
+  font-size: 1.3em;
+}
+.socialHub--vimeo:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f27d";
+  font-size: 1.3em;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .socialHub--rss:before,
+  .socialHub--facebook:before,
+  .socialHub--twitter:before,
+  .socialHub--google:before,
+  .socialHub--linkedin:before,
+  .socialHub--dribble:before,
+  .socialHub--vimeo:before {
+    font-size: 1em;
+  }
 }
 main {
   display: flex;
-  width: 100%;
-  background-color: #ffffff;
+  background-color: #282828;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  main {
+    flex-direction: column;
+  }
 }
 .tags {
   display: flex;
-  width: 76%;
-  color: #5b5f6d;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.tags p {
+.tags > :not(:last-child) {
+  margin-right: 6px;
+}
+.tag__title {
   font-size: 0.75em;
 }
-.tag {
-  display: flex;
-  margin-left: 10px;
+.icon {
+  font-size: 1.3em;
+  color: #3b3b3b;
 }
-.tag :first-child {
-  margin-right: 5px;
+.tag--date:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f017";
+  font-size: 1em;
+}
+.tag--author:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f007";
+  font-size: 1em;
+}
+.tag--comments:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f075";
+  font-size: 1em;
+}
+.tag--topics:before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f036";
+  font-size: 1em;
 }
 .pagination {
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
   padding: 20px 0 20px 30px;
 }
-.pagination .pageNumber {
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .pagination {
+    padding: 10px 0;
+    font-size: 0.8em;
+  }
+}
+.pagination__page {
   display: inline-block;
+  padding: 0 8px;
 }
-.pagination a {
-  margin: 0 5px;
-}
-.pageNumber:hover {
+.pagination__page:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 0.6em;
+  color: #878787;
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  footer {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

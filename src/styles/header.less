@@ -1,8 +1,9 @@
 @import "responsive";
+@import "variables";
 
 header {
-  border-bottom: 1px solid @border-line;
-  background-color: @main-background-color;
+  border-bottom: 1px solid @c-borderLine;
+  background-color: @c-mainBackground;
   font-size: 1.3em;
   font-weight: bold;
 
@@ -13,7 +14,7 @@ header {
     margin-top: 8px;
   }
 
-  .responsive(@media-mobileMin, @media-mobileMax,  {
+  .responsive(@mq-mobileMin, @mq-mobileMax,  {
     margin-left: 10px;
     margin-right: 10px;
   })
@@ -24,7 +25,7 @@ header {
   display: flex;
   padding: 30px;
 
-  .responsive(@media-mobileMin, @media-smartphonesMax,  {
+  .responsive(@mq-mobileMin, @mq-smartphoneMax,  {
     padding: 10px;
   });
 }
@@ -34,7 +35,7 @@ header {
   height: 100px;
   margin-right: 20px;
 
-  .responsive(@media-mobileMin, @media-smartphonesMax,  {
+  .responsive(@mq-mobileMin, @mq-smartphoneMax,  {
     width: 75px;
     height: 75px;
     margin-right: 10px;

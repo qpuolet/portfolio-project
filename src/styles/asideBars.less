@@ -1,30 +1,28 @@
 @import "responsive";
+@import "variables";
+@import "fontAwesome";
 
 .asideWrapper {
   width: 30%;
   min-width: 200px;
 
-  .responsive(@media-mobileMin, @media-smartphonesMax, {
+  .responsive(@mq-mobileMin, @mq-smartphoneMax, {
     width: 100%;
   });
 }
 
 .asideWidget {
   padding: 20px 10px;
-  border-bottom: 1px solid  @border-line;
-
-  .responsive(@media-mobileMin, @media-mobileMax, {
-    padding: 20px 0;
-  });
+  border-bottom: 1px solid  @c-borderLine;
 }
 
 .asideWidget__title {
-  color: @aside-widget-title;
+  color: @c-asideWidgetTittle;
   margin-bottom: 20px;
 }
 
 .asideWidget__list {
-  color: @secondary-text;
+  color: @c-secondaryText;
 }
 
 .u-fs-8 {
@@ -40,25 +38,23 @@
 .topic__item > :first-child {
 
   :before {
-    font-family: 'FontAwesome', sans-serif;
-    content: "\f138";
-    font-size: 1.1em;
+    .fontAwesome("\f138", 1.1em);
     margin-right: 5px;
-    color: @text-highlighting;
+    color: @c-topicItemIcon;
   }
 
   :hover {
-    color: @text-highlighting;
+    color: @c-linkHighlighting;
   }
 }
 
 .recentPost__title:hover {
-  color: @text-highlighting;
+  color: @c-linkHighlighting;
 }
 
 .twitter__link {
   display: block;
-  color: @text-highlighting;
+  color: @c-linkHighlighting;
 }
 
 .asideWidget--tags {
@@ -68,37 +64,36 @@
   }
 }
 
-.tag__item {
+
+// bug ///////*****************/////////
+.tag__item  {
   margin-right: 4px;
   padding: 5px;
-  background-color: @background-highlighting;
+  background-color: @c-blockBackground;
   margin-bottom: 4px;
   font-size: .9em;
   font-weight: 400;
 
-  &:hover{
-    background-color: #1fa3e3;
+  &:hover {
+    background-color: @c-linkHighlighting;
   }
-
-  &:hover .isHover{
-    color: #fff;
+  & > :first-child:hover{
+    color: @c-textHighlighting;
   }
 }
 
 .asideWidget--calendar {
   padding-left: 0;
-  max-width: 300px;
 
-  .responsive(@media-mobileMin, @media-mobileMax, {
+  .responsive(@mq-mobileMin, @mq-mobileMax, {
     margin: 0 auto;
-    max-width: 300px;
   });
 }
 
 .calendar {
   margin: 0 auto;
   font-size: 0.7em;
-  color: @secondary-text;
+  color: @c-secondaryText;
 
   table {
     width: 90%;
@@ -117,26 +112,24 @@
     cursor: default;
   }
   th {
-    color: #1fa3e3;
+    color: @c-calendarDayHighlighting;
   }
 
   .active, .toDay {
-    background-color: @background-highlighting;
+    background-color: @c-blockBackground;
   }
 
   td:hover {
-    background-color: #1fa3e3;
-    color: white;
+    background-color: @c-calendarDayHighlighting;
+    color: @c-textHighlighting;
   }
 }
 
 .asideWidget__commentator {
-  color: @text-highlighting;
+  color: @c-linkHighlighting;
 }
 
 
-.recentComment__item:hover {
-  .isHover {
-    color: @text-highlighting;
-  }
+.recentComment__item >:first-child:hover {
+  color: @c-linkHighlighting;
 }

@@ -1,80 +1,79 @@
-.secondary {
+.asideWrapper {
   width: 30%;
+  min-width: 200px;
 }
-.secondary h4 {
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .asideWrapper {
+    width: 100%;
+  }
+}
+.asideWidget {
+  padding: 20px 10px;
+  border-bottom: 1px solid #3b3b3b;
+}
+.asideWidget__title {
+  color: #fff;
   margin-bottom: 20px;
 }
-.secondary li {
-  margin-bottom: 10px;
+.asideWidget__list {
+  color: #878787;
+}
+.u-fs-8 {
   font-size: 0.8em;
 }
-.topicCategories,
-.lastPosts,
-.twitterBar,
-.asideTags,
-.recentComments {
-  padding: 20px 10px;
-  border-bottom: 1px solid #e5e5e5;
-}
-.topicCategory,
-.recentPost,
-.twitterPost {
+.u-mb-10:not(:last-child) {
   margin-bottom: 10px;
 }
-.topicCategory p,
-.recentPost p,
-.twitterPost p {
-  display: inline-block;
+.topic__item > :first-child :before {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f138";
+  font-size: 1.1em;
+  margin-right: 5px;
+  color: #4794ba;
 }
-.topicCategory i {
-  color: #4ca5d0;
+.topic__item > :first-child :hover {
+  color: #4794ba;
 }
-.topicCategory p,
-.twitterPost p {
-  font-size: 0.8em;
+.recentPost__title:hover {
+  color: #4794ba;
 }
-.lastPosts :first-child {
-  margin-left: 0;
-}
-.lastPosts h5,
-.lastPosts i,
-.lastPosts p {
-  color: #5b5f6d;
-}
-.twitterBar a {
-  color: #4ca5d0;
-  font-size: 0.8em;
-}
-.twitterBar b {
-  color: #5b5f6d;
-  font-size: 0.8em;
-}
-.twitterBar p {
+.twitter__link {
   display: block;
-  color: #b1b1b1;
-  font-size: 0.7em;
+  color: #4794ba;
 }
-.tagsWrapper {
+.asideWidget--tags .asideWidget__list {
   display: flex;
   flex-wrap: wrap;
 }
-.asideTag {
+.tag__item {
+  margin-right: 4px;
   padding: 5px;
-  background-color: #e5e5e5;
-  margin-right: 2px;
-  margin-bottom: 2px;
+  background-color: #3b3b3b;
+  margin-bottom: 4px;
+  font-size: .9em;
+  font-weight: 400;
 }
-.asideTag:hover {
-  background-color: #1fa3e3;
-  color: white;
+.tag__item:hover {
+  background-color: #4794ba;
+}
+.tag__item > :first-child:hover {
+  color: #fff;
+}
+.asideWidget--calendar {
+  padding-left: 0;
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .asideWidget--calendar {
+    margin: 0 auto;
+  }
 }
 .calendar {
-  padding: 20px 10px;
+  margin: 0 auto;
   font-size: 0.7em;
-  border-bottom: 1px solid #e5e5e5;
+  color: #878787;
 }
 .calendar table {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 .calendar caption {
@@ -84,24 +83,24 @@
 }
 .calendar td,
 .calendar th {
-  margin-right: 8px;
+  padding: 4px;
   text-align: center;
+  cursor: default;
 }
 .calendar th {
   color: #1fa3e3;
 }
+.calendar .active,
+.calendar .toDay {
+  background-color: #3b3b3b;
+}
 .calendar td:hover {
   background-color: #1fa3e3;
-  color: white;
+  color: #fff;
 }
-.recentComments .postDate {
-  margin-left: 0;
+.asideWidget__commentator {
+  color: #4794ba;
 }
-.recentComments span {
-  color: #1fa3e3;
-}
-.recentComments p {
-  color: #5b5f6d;
-  font-size: 0.8em;
-  font-weight: bold;
+.recentComment__item > :first-child:hover {
+  color: #4794ba;
 }

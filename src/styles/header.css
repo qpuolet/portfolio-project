@@ -1,22 +1,39 @@
 header {
-  width: 100%;
-  border-bottom: 1px solid #e5e5e5;
-  background-color: #ffffff;
+  border-bottom: 1px solid #3b3b3b;
+  background-color: #282828;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+header .speciality {
+  display: block;
+  color: #4ca5d0;
+  font-size: .8em;
+  margin-top: 8px;
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  header {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 .userProfile {
   display: flex;
   padding: 30px;
 }
-.userProfileAvatar {
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .userProfile {
+    padding: 10px;
+  }
+}
+.userProfile__avatar {
   width: 100px;
   height: 100px;
   margin-right: 20px;
 }
-.userProfileInfo {
-  display: flex;
-  flex-direction: column;
-}
-.userProfileInfo h4 {
-  color: #4ca5d0;
-  margin-top: 8px;
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .userProfile__avatar {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  }
 }

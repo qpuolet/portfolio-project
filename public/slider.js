@@ -1,44 +1,13 @@
-// function Slider() {
-//   this.slideCount = 1;
-//
-//   this.showSlide = function (n = 1){
-//     this.n = n;
-//     let slides =  document.getElementsByClassName("sliderItem");
-//     if (this.n > slides.length) this.slideCount = 1;
-//     if(this.n < 1) this.slideCount = slides.length;
-//     for (let i = 0; i < slides.length; i++) {
-//       i === (this.slideCount - 1)?
-//         slides[i].style.display = "block" :
-//         slides[i].style.display = "none";
-//     }
-//   }
-//
-//   this.init = function() {
-//     this.showSlide();
-//   }
-//
-//   this.changeIndex = function(x) {
-//     this.x = x;
-//
-//     let num = this.slideCount += this.x;
-//     this.showSlide(num)
-//   }
-// }
-//
-// let blogSlider = new Slider();
-//
-// blogSlider.init();
-
 let Slider = {
   config: {
+    slideCount: 0,
     prevSlide: null,
     curSlide: 0,
     nextSlide: null,
-    autoPlay: false,
-    isArrow: true,
-    slideCount: 0,
+    autoFlip: false,
     coordXDown: 0,
-    cordXUp: 0,
+    coordXUp: 0,
+
   },
 
   initArrows() {
@@ -57,6 +26,7 @@ let Slider = {
     fragment.appendChild(this.nextArrow);
 
     this.node.appendChild(fragment);
+
   },
 
   initMouseHandlers() {
@@ -64,6 +34,12 @@ let Slider = {
     this.node.onmouseup = this.mouseUp.bind(this);
     this.node.ontouchstart = this.touchDown.bind(this);
     this.node.ontouchend = this.touchUp.bind(this);
+
+    if(this.config.autoFlip) {
+      this.node.onmouseout = this.flipSlides.bind(this);
+      this.node.onmouseover = this.stopFlippingSlides.bind(this);
+    }
+
   },
 
   nextSlide() {
@@ -84,8 +60,8 @@ let Slider = {
       this.config.nextSlide = 0;
     }
 
-    console.log('prev=' + this.config.prevSlide + ' curr=' + this.config.curSlide + ' next=' + this.config.nextSlide);
     this.goToSlide(this.config.curSlide);
+
   },
 
   prevSlide() {
@@ -106,68 +82,79 @@ let Slider = {
       this.config.prevSlide = this.config.slideCount;
     }
 
-    console.log('prev=' + this.config.prevSlide + ' curr=' + this.config.curSlide + ' next=' + this.config.nextSlide);
     this.goToSlide(this.config.curSlide);
+
   },
 
-  mouseDown(event) {
-    console.log('down', event.clientX);
+  mouseDown() {
     this.config.coordXDown = event.clientX;
   },
 
   mouseUp() {
-    console.log('up', event.clientX);
     this.config.coordXUp = event.clientX;
     this.swipe();
+
   },
 
   touchDown() {
-    console.log('touchDown', event.touches[0].clientX);
     this.config.coordXDown = event.touches[0].clientX;
-    console.log(this.config.coordXDown);
+
   },
 
   touchUp() {
-    console.log('touchUp', event.changedTouches[0].clientX);
     this.config.coordXUp = event.changedTouches[0].clientX;
     this.swipe();
+
   },
 
   swipe () {
-
     let swipeX = this.config.coordXDown - this.config.coordXUp;
-    console.log(swipeX);
+
     let swipeSize = 120;
     if (window.matchMedia("(max-width: 480px)").matches) swipeSize = 60;
+
     if (swipeX < 0 && swipeX < -swipeSize) { this.prevSlide()}
     if(swipeX > 0 && swipeX > swipeSize) { this.nextSlide() }
+
   },
 
   initSlide() {
-    let curSlide = Array.from(this.node.getElementsByClassName('sliderItem'))[0];
-    curSlide.classList.add("aTemp");
+    let curSlide = Array.from(this.node.getElementsByClassName('sliderItem'))[this.config.curSlide];
+    curSlide.classList.add("sliderItem__initSlider", "sliderItem__showSlide");
+  },
+
+  flipSlides() {
+    this.flipInterval = setInterval(() => this.nextSlide(), 5000);
+  },
+
+  stopFlippingSlides() {
+    clearInterval(this.flipInterval);
+
   },
 
   init(node, config) {
     this.config = Object.assign({}, this.config, config || {});
     this.config.slideCount = node.children.length - 1;
     if (this.config.slideCount < 1) return;
+    
     this.node = node;
     node.Slider = this;
+    
     this.initSlide();
     this.initArrows();
     this.initMouseHandlers();
+    if(this.config.autoFlip) this.flipSlides();
+
   },
 
   goToSlide(x) {
-    console.log('goToSlide', x);
     let curSlide = Array.from(this.node.getElementsByClassName('sliderItem'));
-    curSlide.forEach(slide => slide.classList.remove('aTemp'));
-    curSlide[x].classList.add('aTemp');
+    curSlide.forEach(slide => slide.classList.remove('sliderItem__showSlide'));
+    curSlide[x].classList.add('sliderItem__showSlide');
   },
 
 };
 
 Array.prototype.forEach.call(document.querySelectorAll('.postPreview__slidesList'), (node) => {
-  Object.create(Slider).init(node, {isArrow: false, test: true});
+  Object.create(Slider).init(node, {autoFlip: true, curSlide: 1});
 });

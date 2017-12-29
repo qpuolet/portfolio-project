@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="stylesheet" href="./font-awesome.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="gradient"></div>
+  <div class="wrapper">
+    <div class="socialHub">
+      <a href="#" class="socialHub--rss"></a>
+      <a href="#" class="socialHub--facebook"></a>
+      <a href="#" class="socialHub--twitter"></a>
+      <a href="#" class="socialHub--google"></a>
+      <a href="#" class="socialHub--linkedin"></a>
+      <a href="#" class="socialHub--dribble"></a>
+      <a href="#" class="socialHub--vimeo"></a>
+    </div>
+    <header>
+      <div class="userProfile">
+        <a href="#">
+          <img class="userProfile__avatar" src="./img/majestic.jpg" alt="avatar" draggable="false"/>
+        </a>
+        <div class="userProfile__info">
+          <a href="#"><span>Anton</span></a>
+          <a href="#"><span>Kudryavtsev</span></a>
+          <a href="#" class="speciality"><span>Junior Front-End Developer</span></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="cardList">
+
+        <div class="card">
+          <input class="spoilerSwitcher" type="checkbox" />
+          <div class="card__header card--resume">
+            <div class="blockBadge">
+              <div class="blockBadge__label"></div>
+              <div class="blockBadge__tittle"><h3>Resume</h3></div>
+            </div>
+          </div>
+          <div class="card__body">
+            <p>dfdffdsdsf</p>
+            <img class="card__image" src="./img/majestic.jpg" alt="">
+          </div>
+        </div>
+        <div class="card">
+          <input class="spoilerSwitcher" type="checkbox" />
+          <div class="card__header card--portfolio">
+            <div class="blockBadge">
+              <div class="blockBadge__label"></div>
+              <div class="blockBadge__tittle"><h3>Portfolio</h3></div>
+            </div>
+          </div>
+          <div class="card__body">
+            <p>dfdffdsdsf</p>
+            <img class="card__image" src="./img/majestic.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="card">
+          <input class="spoilerSwitcher" type="checkbox"  checked />
+          <div class="card__header card--contacts">
+            <div class="blockBadge">
+              <div class="blockBadge__label"></div>
+              <div class="blockBadge__tittle"><h3>Contacts</h3></div>
+            </div>
+          </div>
+          <div class="card__body drop">
+
+            <div class="contactFormWrapper">
+              <form class="contactForm">
+                <div class="contactForm__selectTittleWrapper">
+                  <select name="titleType" id="formTitle" class="contactForm__selectTittle">
+                    <option value="keep in touch">keep in touch</option>
+                    <option value="keep">keep</option>
+                    <option value="keep in">keep in</option>
+                    <option value="in touch">in touch</option>
+                  </select>
+                  <span class="contactForm__selectArrow"></span>
+                </div>
+                <div class="temp">
+                  <div class="contactForm__inputWrapper">
+                    <label for="contactForm__name">Name</label>
+                    <input class="contactForm__input" type="text" name="firstName" id="contactForm__name">
+                  </div>
+                  <div class="contactForm__inputWrapper">
+                    <label for="contactForm__email">Email</label>
+                    <input class="contactForm__input" type="email" name="email" id="contactForm__email">
+                  </div>
+                </div>
+                <div class="contactForm__inputMessageWrapper">
+                  <label  for="contactForm__message">Your Message</label>
+                  <textarea class="contactForm__inputMessage" name="message" id="contactForm__message"></textarea>
+                </div>
+                <input class="contactForm__submitForm" type="submit" value="Submit" />
+              </form>
+              <div class="vCard">
+                <span class="vCard__title">VCARD</span>
+                <img src="./img/vcard.png" alt="vCard" class="vCard__image">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <p>ThemeRex © 2014 All Rights Reserved</p>
+    </footer>
+  </div>
+
+</body>
+</html>

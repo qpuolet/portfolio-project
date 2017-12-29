@@ -1,14 +1,17 @@
 @import "responsive";
+@import "variables";
+@import "fontAwesome";
 
 // typography
 a {
-  color: @secondary-text;
+  color: @c-secondaryText;
 }
 body {
-  background-color: @body-background-color;
+  background-color: @c-bodyBackground;
+  overflow-y: scroll;
 
-  .responsive(@media-mobileMin, @media-mobileMax,  {
-    background-color: @main-background-color;
+  .responsive(@mq-mobileMin, @mq-mobileMax,  {
+    background-color: @c-mainBackground;
   })
 }
 
@@ -17,11 +20,11 @@ body {
   height: 2px;
   width: 100%;
   background: linear-gradient(to right,
-  @badge__text 20%,
-  @badge-link 20%, @badge-link 40%,
-  @badge__photo 40%, @badge__photo 60%,
-  @badge__music 60%, @badge__music 80%,
-  @badge-video 80%);
+  @c-gradientFirst 20%,
+  @c-gradientSecond 20%, @c-gradientSecond 40%,
+  @c-gradientThird 40%, @c-gradientThird 60%,
+  @c-gradientFourth 60%, @c-gradientFourth 80%,
+  @c-gradientFifth 80%);
 }
 
 .wrapper {
@@ -32,17 +35,17 @@ body {
   margin: 0 auto;
   padding-bottom: 30px;
 
-  .responsive(@media-mobileMin, @media-mobileMax,  {
+  .responsive(@mq-mobileMin, @mq-mobileMax,  {
     padding-top: 20px;
     min-width: 320px;
     width: 100%;
   });
 
-  .responsive(@media-mobileMax+1, @media-smartphonesMax,  {
+  .responsive(@mq-mobileMax+1, @mq-smartphoneMax,  {
     width: 70%;
   });
 
-  .responsive(@media-smartphonesMax+1, @media-tabletMax, {
+  .responsive(@mq-smartphoneMax+1, @mq-tabletMax, {
     width: 80%;
   })
 }
@@ -51,57 +54,64 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 0.5em;
-  color: @social-icon;
+  color: @c-socialsIcon;
 
-  .icon {
+  & > :hover {
+    color: @c-linkHighlighting;
+  }
+
+  & > :not(:last-child) {
     margin-right: 0.8em;
-
-    .responsive(@media-mobileMin, @media-smartphonesMax,  {
-      font-size: 1em;
-    })
   }
 }
 
-.icon:not(.postBadge):hover {
-  color: @text-highlighting;
-}
-
 .socialHub--rss:before{
-  content: "\f09e";
+  .fontAwesome("\f09e", 1.3em);
 }
 
 .socialHub--facebook:before{
-  content: "\f09a";
+  .fontAwesome("\f09a", 1.3em);
 }
 
 .socialHub--twitter:before{
-  content: "\f099";
+  .fontAwesome("\f099", 1.3em);
 }
 
 .socialHub--google:before{
-  content: "\f0d5";
+  .fontAwesome("\f0d5", 1.3em);
 }
 
 .socialHub--linkedin:before{
-  content: "\f0e1";
+  .fontAwesome("\f0e1", 1.3em);
 }
 
 .socialHub--dribble:before{
-  content: "\f17d";
+  .fontAwesome("\f17d", 1.3em);
 }
 
 .socialHub--vimeo:before{
-  content: "\f27d";
+  .fontAwesome("\f27d", 1.3em);
 }
+
+.socialHub--rss:before,
+.socialHub--facebook:before,
+.socialHub--twitter:before,
+.socialHub--google:before,
+.socialHub--linkedin:before,
+.socialHub--dribble:before,
+.socialHub--vimeo:before {
+  .responsive(@mq-mobileMin, @mq-smartphoneMax, {
+    font-size: 1em;
+  })
+}
+
 
 main {
   display: flex;
-  background-color: @main-background-color;
+  background-color: @c-mainBackground;
 
-  .responsive(@media-mobileMin, @media-smartphonesMax,  {
+  .responsive(@mq-mobileMin, @mq-smartphoneMax,  {
     flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
   });
 }
 
@@ -123,29 +133,22 @@ main {
 }
 
 .icon {
-  font-family: 'FontAwesome', sans-serif;
   font-size: 1.3em;
-  color: @social-icon;
-}
 
-.tag--author:before,
-.tag--comments:before,
-.tag--topics:before,
-.tag--date:before {
-  font-family: 'FontAwesome', sans-serif;
+  color: @c-socialsIcon;
 }
 
 .tag--date:before {
-  content: "\f017";
+  .fontAwesome("\f017", 1em);
 }
 .tag--author:before{
-  content: "\f007";
+  .fontAwesome("\f007", 1em);
 }
 .tag--comments:before{
-  content: "\f075";
+  .fontAwesome("\f075", 1em);
 }
 .tag--topics:before {
-  content: "\f036";
+  .fontAwesome("\f036", 1em);
 }
 
 
@@ -153,10 +156,9 @@ main {
 
 // pagination
 .pagination {
-  border-top: 1px solid @border-line;
   padding: 20px 0 20px 30px;
 
-  .responsive(@media-mobileMin, @media-mobileMax,  {
+  .responsive(@mq-mobileMin, @mq-mobileMax,  {
     padding: 10px 0;
     font-size: 0.8em;
   })
@@ -178,9 +180,9 @@ footer {
   margin-top: 20px;
   font-weight: bold;
   font-size: 0.6em;
-  color: @secondary-text;
+  color: @c-secondaryText;
 
-  .responsive(@media-mobileMin, @media-mobileMax,  {
+  .responsive(@mq-mobileMin, @mq-mobileMax,  {
     margin-left: 10px;
     margin-right: 10px;
   })
